@@ -12,4 +12,6 @@ public class Miniature : ScriptableObject
     public ResourceType output;
 
     public ResourceType secondaryOutput;
+
+    public bool destroyed = false;
 }

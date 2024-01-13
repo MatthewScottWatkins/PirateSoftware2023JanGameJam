@@ -8,4 +8,19 @@ public class DistrictInformation : MonoBehaviour
 {
     public Miniature miniature;
 
+    public DistrictInformation[] adjacentDistricts;
+    private List<DistrictInformation> activeAdjacentDistricts;
+
+    private void Awake()
+    {
+
+        foreach (var district in adjacentDistricts)
+        {
+            if (!miniature.destroyed)
+            {
+                activeAdjacentDistricts.Add(district);
+            }
+        }
+    }
+
 }
