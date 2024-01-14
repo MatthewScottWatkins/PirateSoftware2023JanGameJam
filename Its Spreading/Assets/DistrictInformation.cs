@@ -13,6 +13,8 @@ public class DistrictInformation : MonoBehaviour
 
     private void Awake()
     {
+        miniature = Instantiate(miniature);
+
 
         foreach (var district in adjacentDistricts)
         {
