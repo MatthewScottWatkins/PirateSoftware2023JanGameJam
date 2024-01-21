@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0843a81e7ca915f46bc1f75e814518b9
+guid: 5a023c184489ac94a9eb10776c941165
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_0
+      name: Shout Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3676869f816daa48a0188873683ee42
+      internalID: -385802592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 136
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4154ccfdbe41e49a3892bb407bdbb8
+      internalID: -960946609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_8
       rect:
         serializedVersion: 2
         x: 8
@@ -119,35 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b7c696468ab9f46ad7808c6f5e1934
-      internalID: 1843372827
+      spriteID: 6db43c44954798f489cd7b3620649a8a
+      internalID: 769977189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 72
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5b3cb4cd7d8fb04b8f93e8acd2527b8
-      internalID: 85884129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking Left Sprite Sheet_2
+      name: Shout Sprite Sheet_9
       rect:
         serializedVersion: 2
         x: 72
@@ -161,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f1a56dfded3bc74ca88797dfdd1e764
-      internalID: 1759922539
+      spriteID: 9e81e806472fee74a9ec07a878944aa3
+      internalID: 844015180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_3
+      name: Shout Sprite Sheet_11
       rect:
         serializedVersion: 2
         x: 200
@@ -182,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b38822d836ae3db49b563749edea6667
-      internalID: 84608399
+      spriteID: 2ae3bb73d1aaa794f8fee98938842dcd
+      internalID: 1641416423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_5
+      name: Shout Sprite Sheet_12
       rect:
         serializedVersion: 2
         x: 8
@@ -203,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50ca81b16f82e8b43be44b5723e5822c
-      internalID: -1928602454
+      spriteID: 89911ca2c0a2169458c02a0bd94dd15d
+      internalID: -2113679824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_6
+      name: Shout Sprite Sheet_13
       rect:
         serializedVersion: 2
         x: 72
@@ -224,18 +245,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 294b61c6aee01ed498baf7e222a348e6
-      internalID: -30575401
+      spriteID: f210b7f3031b740418fdb06faf89cb0b
+      internalID: -282765628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_7
+      name: Shout Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd859e5b8d09574c8c34b4e077b5323
+      internalID: 2009366617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 200
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cea86ef27e80b4e8e165fbce15f4fd
+      internalID: 105717722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_2
       rect:
         serializedVersion: 2
         x: 136
-        y: 8
+        y: 200
         width: 48
         height: 48
       alignment: 0
@@ -245,18 +308,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50227b457023c214eaa53b3d45672212
-      internalID: -575308172
+      spriteID: a029da54acb2e4b468f4cd185435c2e8
+      internalID: 70216473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking Left Sprite Sheet_8
+      name: Shout Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 8
+        x: 8
+        y: 136
         width: 48
         height: 48
       alignment: 0
@@ -266,8 +329,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0de139d3282fe674ca6ef61877d11eae
-      internalID: 1536476921
+      spriteID: 992bcac3aaf40eb49841df97b97ca38b
+      internalID: -1618684150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34552a279921ae145a43f932d28c6122
+      internalID: 582366761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b087062a546349642b8dd6ff93003dfb
+      internalID: -335557976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shout Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 72
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64d3904567594943b847710d8aa0eaf
+      internalID: -379058528
       vertices: []
       indices: 
       edges: []
@@ -275,7 +401,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a8429800e9ed7504db30286dd9c00c8a
+    spriteID: 4d12b8cdecfea8a479ba96c4819e195f
     internalID: 0
     vertices: []
     indices: 
@@ -283,16 +409,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walking Left Sprite Sheet_2: 1759922539
-      Walking Left Sprite Sheet_0: 1843372827
-      Walking Left Sprite Sheet_6: -30575401
-      Walking Left Sprite Sheet_1: 85884129
-      Walking Left Sprite Sheet_8: 1536476921
-      Walking Left Sprite Sheet_9: -1364154604
-      Walking Left Sprite Sheet_3: 84608399
-      Walking Left Sprite Sheet_4: -219304917
-      Walking Left Sprite Sheet_5: -1928602454
-      Walking Left Sprite Sheet_7: -575308172
+      Shout Sprite Sheet_2: 70216473
+      Shout Sprite Sheet_15: -1263215171
+      Shout Sprite Sheet_12: -2113679824
+      Shout Sprite Sheet_0: 2009366617
+      Shout Sprite Sheet_11: 1641416423
+      Shout Sprite Sheet_14: 1209490333
+      Shout Sprite Sheet_13: -282765628
+      Shout Sprite Sheet_6: -335557976
+      Shout Sprite Sheet_16: 2068160949
+      Shout Sprite Sheet_20: 184987315
+      Shout Sprite Sheet_17: -1446262379
+      Shout Sprite Sheet_10: -379058528
+      Shout Sprite Sheet_7: -960946609
+      Shout Sprite Sheet_18: -1872705732
+      Shout Sprite Sheet_22: 1226066445
+      Shout Sprite Sheet_1: 105717722
+      Shout Sprite Sheet_4: -1618684150
+      Shout Sprite Sheet_5: 582366761
+      Shout Sprite Sheet_8: 769977189
+      Shout Sprite Sheet_23: 106751190
+      Shout Sprite Sheet_24: -438911852
+      Shout Sprite Sheet_3: -385802592
+      Shout Sprite Sheet_19: 94264803
+      Shout Sprite Sheet_9: 844015180
+      Shout Sprite Sheet_21: -1713793100
+      Shout Sprite Sheet_25: 1208317113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

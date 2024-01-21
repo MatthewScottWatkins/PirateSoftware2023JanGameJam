@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d5fbf3e609f3dc9488040a0f8530bd65
+guid: 0b9407fe2b5d1464f8332f1ff514aa13
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,23 +101,95 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Left Sprite Sheet_0
+      name: Hurt Foot Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a369391136c784ea087b97428666af
+      internalID: 525036846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt Foot Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a348fcd48c4b98948b44188bb1335918
+      internalID: -1559521319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt Foot Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 72
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c088739a816954ea74f111d71e3446
+      internalID: -1743634740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt Foot Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 72
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4121cff009d79345a561758c46c3b83
+      internalID: -1607433310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt Foot Sprite Sheet_4
       rect:
         serializedVersion: 2
         x: 8
@@ -125,20 +197,20 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d5af6392e747b54f906f823c9509b33
-      internalID: 2055040490
+      spriteID: f24da805c0251bb428ad4bfa9726fbf3
+      internalID: 631557972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Left Sprite Sheet_1
+      name: Hurt Foot Sprite Sheet_5
       rect:
         serializedVersion: 2
         x: 72
@@ -146,20 +218,20 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2fbd54b31073b844a2dcb41153b3079
-      internalID: -1658846800
+      spriteID: c493e219f10a9604ea3b6d16d3d66de0
+      internalID: -371391608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Left Sprite Sheet_2
+      name: Hurt Foot Sprite Sheet_6
       rect:
         serializedVersion: 2
         x: 136
@@ -167,35 +239,14 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa269c78b35d0f4397387c992d1c7b3
-      internalID: -645659845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle Left Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 8
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4eb7876b87e9dc74bb7b1451c17e74e6
-      internalID: 550577415
+      spriteID: 5531ed0943b63b343b59f496a8ee732a
+      internalID: 1557388768
       vertices: []
       indices: 
       edges: []
@@ -203,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2c42d4a3ddb58304798611fe39f02105
+    spriteID: bb6d5be354ac2394d954dd5b5ed19d2f
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +262,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle Left Sprite Sheet_0: 2055040490
-      Idle Left Sprite Sheet_2: -645659845
-      Idle Left Sprite Sheet_1: -1658846800
-      Idle Left Sprite Sheet_3: 550577415
+      Hurt Foot Sprite Sheet_0: 525036846
+      Hurt Foot Sprite Sheet_3: -1607433310
+      Hurt Foot Sprite Sheet_4: 631557972
+      Hurt Foot Sprite Sheet_6: 1557388768
+      Hurt Foot Sprite Sheet_8: 206648554
+      Hurt Foot Sprite Sheet_2: -1743634740
+      Hurt Foot Sprite Sheet_7: 1257961879
+      Hurt Foot Sprite Sheet_1: -1559521319
+      Hurt Foot Sprite Sheet_9: -1320274968
+      Hurt Foot Sprite Sheet_5: -371391608
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

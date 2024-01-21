@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 796980bbe68e2ea42b5eae0e655a6b92
+guid: d88b2400080465c4db0ee4b10146c3f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,23 +101,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sweep Left Sprite Sheet_0
+      name: Making Food Sprite Sheet_0
       rect:
         serializedVersion: 2
         x: 8
@@ -131,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97b9b127312e884469fcf51f38391986
-      internalID: -2103357941
+      spriteID: f8b533b545a3f40499ab959e728fe74b
+      internalID: 332961325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Left Sprite Sheet_1
+      name: Making Food Sprite Sheet_1
       rect:
         serializedVersion: 2
         x: 72
@@ -152,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac2f788326029204ea18e27d5bfc2bf0
-      internalID: 1267299587
+      spriteID: e2c1bef9987e95b4588310d74c235705
+      internalID: 1725594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Left Sprite Sheet_2
+      name: Making Food Sprite Sheet_2
       rect:
         serializedVersion: 2
         x: 136
@@ -173,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ca7da346d16ad48be7a9fcc7dfadaf
-      internalID: 169860351
+      spriteID: dd388af85e101db44b9f7425fe0d52f4
+      internalID: -1881031465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Left Sprite Sheet_3
+      name: Making Food Sprite Sheet_3
       rect:
         serializedVersion: 2
         x: 200
@@ -194,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50c7cd66d9bf4040b51c8dea36c7017
-      internalID: -729332576
+      spriteID: 493d9f82a478d85409d994c268f2dfae
+      internalID: -507304920
       vertices: []
       indices: 
       edges: []
@@ -203,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e43317f16910bf34684c1d996d22ca47
+    spriteID: d605423c7327d27438d6bc1840fd6006
     internalID: 0
     vertices: []
     indices: 
@@ -211,11 +199,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sweep Left Sprite Sheet_4: -1787595158
-      Sweep Left Sprite Sheet_0: -2103357941
-      Sweep Left Sprite Sheet_3: -729332576
-      Sweep Left Sprite Sheet_1: 1267299587
-      Sweep Left Sprite Sheet_2: 169860351
+      Making Food Sprite Sheet_0: 332961325
+      Making Food Sprite Sheet_2: -1881031465
+      Making Food Sprite Sheet_4: -1835434254
+      Making Food Sprite Sheet_3: -507304920
+      Making Food Sprite Sheet_1: 1725594
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
