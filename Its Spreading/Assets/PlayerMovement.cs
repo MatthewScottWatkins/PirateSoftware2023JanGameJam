@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     PlayerInput input;
     PlayerActionInput inputActions;
 
+    public SpriteRenderer sprite;
+
     public float speed;
     private void Awake()
     {
@@ -26,5 +28,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 inputVector = inputActions.Player.Move.ReadValue<Vector2>();
         float speed = 5f;
         rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed, ForceMode2D.Force);
+
+        if (inputVector.x == -1)
+        {
+            sprite.flipX = true;
+        }
+        else if (inputVector.x == 1)
+        { 
+            sprite.flipX = false; 
+        }
     }
 }
