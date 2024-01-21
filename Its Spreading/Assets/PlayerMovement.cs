@@ -32,7 +32,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //if trying to move
+<<<<<<< HEAD
+        if(previousInput != Vector2.zero)
+=======
         if (previousInput != Vector2.zero)
+>>>>>>> main
         {
             rb.AddForce(new Vector2(previousInput.x, previousInput.y) * speed, ForceMode2D.Force);
 
