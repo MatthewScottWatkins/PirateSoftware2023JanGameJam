@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 1138861196}
   - component: {fileID: 1138861197}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2025,8 +2025,8 @@ Transform:
   m_GameObject: {fileID: 1138861195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1710502127}
   m_RootOrder: 1
@@ -3506,10 +3506,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 861898bf4a504da489549412dcb56e44, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!4 &1710502127
 Transform:
@@ -3556,7 +3556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7c794564ffa3b468eb82c61e10783f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  sprite: {fileID: 1138861197}
+  speed: 2
 --- !u!1 &1746612941
 GameObject:
   m_ObjectHideFlags: 0
