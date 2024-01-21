@@ -9,17 +9,22 @@ public class PlayerMovement : MonoBehaviour
 
     PlayerInput input;
     PlayerActionInput inputActions;
+
+    public float speed;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInput>();
 
-        inputActions = new PlayerActionInput;
+        inputActions = new PlayerActionInput();
+        inputActions.Player.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 inputVector = inputActions.Player.Move.ReadValue<Vector2>();
+        float speed = 5f;
+        rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed, ForceMode2D.Force);
     }
 }
