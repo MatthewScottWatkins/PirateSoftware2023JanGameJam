@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Controls controls;
     private SpriteRenderer sprite;
+    private Animator animator;
     private Vector2 previousInput;
 
     [Header("Stats")]
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         controls = new Controls();
 
@@ -34,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(previousInput.x, previousInput.y) * speed, ForceMode2D.Force);
 
+            animator.SetTrigger("Walk");
+
             //flipping sprite based on input
             if (previousInput.x < 0)
                 sprite.flipX = true;
@@ -44,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("Idle");
             rb.drag = stoppingDrag;
         }
 
