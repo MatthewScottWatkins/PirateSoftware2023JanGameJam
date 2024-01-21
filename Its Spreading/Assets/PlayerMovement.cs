@@ -3,53 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class PlayerMovement : MonoBehaviour
 {
-    //refs
-    private Controls controls;
-    private Rigidbody2D rb;
-    private SpriteRenderer sprite;
+    Rigidbody2D rb;
 
-    [Header("Stats")]
-    public float movementSpeed;
+    PlayerInput input;
+    PlayerActionInput inputActions;
 
-    //movement
-    private Vector2 previousInput;
+    public SpriteRenderer sprite;
 
-
-    void Start()
+    public float speed;
+    private void Awake()
     {
-        rb =  GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        input = GetComponent<PlayerInput>();
 
-        controls = new Controls();
-
-        controls.Player.Movement.performed += SetPreviousInput;
-        controls.Player.Movement.canceled += SetPreviousInput;
-        controls.Enable();
+        inputActions = new PlayerActionInput();
+        inputActions.Player.Enable();
     }
 
-    public void SetPreviousInput(InputAction.CallbackContext ctx)
+    // Update is called once per frame
+    void Update()
     {
-        previousInput = ctx.ReadValue<Vector2>();
-    }
+        Vector2 inputVector = inputActions.Player.Move.ReadValue<Vector2>();
+        float speed = 5f;
+        rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed, ForceMode2D.Force);
 
-    public void Update()
-    {
-        Vector2 force = Vector2.zero;
-
-        if(previousInput != Vector2.zero)
+        if (inputVector.x == -1)
         {
-            //sprite flipping
-            if (previousInput.x != 0)
-                sprite.flipX = true;
-            else
-                sprite.flipX = false;
-
-            force += new Vector2(previousInput.x, previousInput.y) * movementSpeed * Time.deltaTime;
+            sprite.flipX = true;
         }
-        rb.velocity = force;
-        //rb.AddForce(force, ForceMode2D.Impulse);
+        else if (inputVector.x == 1)
+        { 
+            sprite.flipX = false; 
+        }
     }
 }
