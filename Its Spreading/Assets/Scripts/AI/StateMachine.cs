@@ -7,14 +7,25 @@ public class StateMachine : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private State[] states;
+    [SerializeField] private Animator animator;
+    private Station targetStation;
+
     private State curState;
 
     //behavior bools
     private bool captured;
 
+    //gets/sets
+    public Animator GetAnimator() { return animator; }
+    public Station GetTargetStation() { return targetStation; }
+    public void SetTargetStation(Station newStation) { targetStation = newStation; }
 
     private void Start()
     {
+        //events
+
+
+        //fix navmesh rotations
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;

@@ -23,7 +23,7 @@ public class Station : MonoBehaviour
     [SerializeField] private float fillAmountPerTick;
     private float curFillAmount;
     private bool active = false;
-    private bool messy = false;
+    [SerializeField] private bool messy = false;
     private bool claimed = false;
 
     //gets

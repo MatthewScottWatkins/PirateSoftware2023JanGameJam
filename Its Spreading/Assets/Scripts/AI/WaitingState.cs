@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(fileName = "State", menuName = "States/WaitingState")]
 public class WaitingState : State
@@ -11,22 +12,22 @@ public class WaitingState : State
 
     public override void OnEnter()
     {
+        base.OnEnter();
         lastWait = Time.time;
-        //play anim
     }
 
     public override void OnTick()
     {
         if(Time.time - lastWait > waitLength)
         {
-
+            owner.GetTargetStation().SetMessy();// will move to after waiting state
             OnExit();
         }
     }
 
     public override void OnExit()
     {
-        //owner.SetState();
+        owner.SetState(0);
     }
 
 

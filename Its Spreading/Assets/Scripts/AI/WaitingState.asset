@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52feb8ef5234cf14fa04223495395940, type: 3}
   m_Name: WaitingState
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   nextState: {fileID: 11400000, guid: 0812d7b2ec1ffab4090d88a78e2db3d4, type: 2}
-  waitLength: 20
+  animationName:
+    enabled: 0
+    val: 
+  agent: {fileID: 0}
+  waitLength: 5

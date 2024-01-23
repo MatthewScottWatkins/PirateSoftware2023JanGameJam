@@ -32,6 +32,6 @@ public class StationUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        messBar.fillAmount = messyCount / stationCount;
+        messBar.fillAmount = ((float)messyCount / (float)stationCount);
     }
 }

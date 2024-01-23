@@ -10,7 +10,10 @@ public class SeekingState : State
 
     public override void OnEnter()
     {
-        targetStation = FindObjectOfType<StationManager>().GetRandomStation(); //will change to random excluded
+        base.OnEnter();
+        owner.SetTargetStation(FindObjectOfType<StationManager>().GetRandomStation()); //will change to random excluded
+
+        targetStation = owner.GetTargetStation();
         targetStation.SetClaimed();
         agent.SetDestination(targetStation.transform.position);
     }
@@ -20,7 +23,6 @@ public class SeekingState : State
         if ((agent.transform.position - targetStation.transform.position).sqrMagnitude > stopRange * stopRange)
             return;
 
-        targetStation.SetMessy();// will move to after waiting state
         OnExit();
 
     }

@@ -93,6 +93,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7270148755240176138, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 7391777519104475703, guid: 2f1ab59ca33c61741a9897538bbcf28b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -105,6 +110,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f1ab59ca33c61741a9897538bbcf28b, type: 3}
+--- !u!95 &4188912596903153462 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4202343512501849946, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+    type: 3}
+  m_PrefabInstance: {fileID: 32573001828745324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5676466210756807549 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5671548198144936721, guid: 2f1ab59ca33c61741a9897538bbcf28b,
@@ -148,6 +159,7 @@ MonoBehaviour:
   states:
   - {fileID: 11400000, guid: 0812d7b2ec1ffab4090d88a78e2db3d4, type: 2}
   - {fileID: 11400000, guid: 592fc2c450c1699429e9aef5adda8236, type: 2}
+  animator: {fileID: 4188912596903153462}
 --- !u!114 &6833305761433844546
 MonoBehaviour:
   m_ObjectHideFlags: 0
