@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
+using System;
 
 public class Station : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class Station : MonoBehaviour
     [SerializeField] private UIShowTrigger uiShowTrigger;
     private Controls controls;
 
+    //events
+    public static event Action OnSetMessy;
+    public static event Action OnSetClean;
 
     [Header("Stats")]
     [SerializeField] private float maxFillAmount;
@@ -64,7 +69,7 @@ public class Station : MonoBehaviour
         if (messy)
             return;
 
-        Debug.Log("now messy");
+        OnSetMessy?.Invoke();
 
         //reset variables
         messy = true;
@@ -87,6 +92,7 @@ public class Station : MonoBehaviour
         //if full, turn off
         if(curFillAmount >= maxFillAmount)
         {
+            OnSetClean?.Invoke(); 
             uiShowTrigger.HideUI();
             //change sprite to clean sprite
         }

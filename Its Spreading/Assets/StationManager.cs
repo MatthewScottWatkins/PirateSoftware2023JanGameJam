@@ -6,6 +6,8 @@ public class StationManager : MonoBehaviour
 {
     [SerializeField] private Station[] stations;
 
+    public int GetStationCount() { return stations.Length; }
+
     public Station GetRandomStation() 
     {
         List<Station> availableStations = new List<Station>();
