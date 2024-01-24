@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class StateMachine : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class StateMachine : MonoBehaviour
     public void SetTargetStation(Station newStation) { targetStation = newStation; }
 
     #region events
+
+    public static event Action OnSendToRoom;
     private void OnEnable()
     {
         uiShow.OnShow += SetActive;
@@ -80,5 +83,6 @@ public class StateMachine : MonoBehaviour
         //change state(rage wait)
         SetState(2);
 
+        OnSendToRoom?.Invoke();
     }
 }

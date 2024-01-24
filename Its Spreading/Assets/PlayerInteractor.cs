@@ -10,6 +10,11 @@ public class PlayerInteractor : MonoBehaviour
     public static event Action OnInteract;
     private Controls controls;
 
+    private void OnEnable()
+    {
+        //StateMachine.OnSendToRoom +=
+    }
+
     private void Start()
     {
         controls = new Controls();

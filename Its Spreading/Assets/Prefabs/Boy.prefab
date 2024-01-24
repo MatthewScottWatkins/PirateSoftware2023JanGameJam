@@ -372,6 +372,35 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!114 &645205190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676466210756807549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a1ce0ffa9ae945b57f329dc6c0076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerBar: {fileID: 0}
+  agent: {fileID: 89224578}
+  maxFillAmount: 100
+  curFillAmount: 0
+  fillPerTick: 1
+  tickCooldown: 30
+  hungerSegments:
+  - 100
+  - 75
+  - 50
+  - 25
+  - 0
+  hungerSpeeds:
+  - 3.5
+  - 5
+  - 20
+  - 100
 --- !u!4 &6414906666146838258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6446317208962528926, guid: 2f1ab59ca33c61741a9897538bbcf28b,
