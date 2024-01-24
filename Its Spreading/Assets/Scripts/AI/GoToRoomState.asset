@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75890005b221e549b5731ecf6a31710, type: 3}
-  m_Name: SeekingState
+  m_Script: {fileID: 11500000, guid: ae941f9655721614b89cb4768f317ec3, type: 3}
+  m_Name: GoToRoomState
   m_EditorClassIdentifier: 
-  nextStateIndex: 1
+  nextStateIndex: 4
   animationName:
     enabled: 0
     val: 
   agent: {fileID: 0}
-  stopRange: 2
+  goToTarget: 0
+  stopDistance: 2

@@ -21,13 +21,14 @@ public class WaitingState : State
         if(Time.time - lastWait > waitLength)
         {
             owner.GetTargetStation().SetMessy();// will move to after waiting state
-            OnExit();
+            //OnExit();
+            owner.SetState(nextStateIndex);
         }
     }
 
     public override void OnExit()
     {
-        owner.SetState(0);
+
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "State",menuName = "States/SeekingState")]
 public class SeekingState : State
 {
-    [SerializeField] private float stopRange = 2f;
+    [SerializeField] private float stopDistance = 2f;
     private Station targetStation;
 
     public override void OnEnter()
@@ -20,16 +20,16 @@ public class SeekingState : State
 
     public override void OnTick()
     {
-        if ((agent.transform.position - targetStation.transform.position).sqrMagnitude > stopRange * stopRange)
+        if (agent.remainingDistance > stopDistance)
             return;
 
-        OnExit();
-
+        //set next state
+        owner.SetState(nextStateIndex); //set to waiting state
     }
 
     public override void OnExit()
     {
         agent.ResetPath();
-        owner.SetState(1); //set to waiting state
+
     }
 }

@@ -6,8 +6,10 @@ using UnityEngine.AI;
 public class StateMachine : MonoBehaviour
 {
     [Header("References")]
+    [Tooltip("Set in order of seeking, waiting, rage waiting, gotoroom, gotokitchen, kitchen wait")]
     [SerializeField] private State[] states;
     [SerializeField] private Animator animator;
+    [SerializeField] private UIShowTrigger uiShow;
     private Station targetStation;
 
     private State curState;
@@ -20,11 +22,31 @@ public class StateMachine : MonoBehaviour
     public Station GetTargetStation() { return targetStation; }
     public void SetTargetStation(Station newStation) { targetStation = newStation; }
 
+    #region events
+    private void OnEnable()
+    {
+        uiShow.OnShow += SetActive;
+        uiShow.OnHide += SetInactive;
+    }
+
+    private void OnDisable()
+    {
+        uiShow.OnShow -= SetActive;
+        uiShow.OnHide -= SetInactive;
+    }
+
+    private void SetActive()
+    {
+        PlayerInteractor.OnInteract += OnInteract;
+    }
+    private void SetInactive()
+    {
+        PlayerInteractor.OnInteract -= OnInteract;
+    }
+    #endregion
+
     private void Start()
     {
-        //events
-
-
         //fix navmesh rotations
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -41,6 +63,7 @@ public class StateMachine : MonoBehaviour
 
     public void SetState(int newStateIndex) 
     {
+        curState?.OnExit();
         curState = states[newStateIndex];  
         curState.OnEnter(); 
     }
@@ -50,5 +73,12 @@ public class StateMachine : MonoBehaviour
         curState?.OnTick();
 
         //Debug.Log($"{curState}");
+    }
+
+    private void OnInteract()
+    {
+        //change state(rage wait)
+        SetState(2);
+
     }
 }

@@ -31,24 +31,33 @@ public class Station : MonoBehaviour
     public bool GetClaimedBool() { return claimed; }
 
 
-    private void Start()
-    {
-        controls = new Controls();
+    //private void Start()
+    //{
+    //    controls = new Controls();
 
-        controls.Player.Interaction.performed += Interaction;
-        controls.Enable();
-    }
+    //    controls.Player.Interaction.performed += Interaction;
+    //    controls.Enable();
+    //}
 
+    #region events
     private void OnEnable()
     {
         uiShowTrigger.OnShow += SetActive;
         uiShowTrigger.OnHide += SetInactive;
     }
 
+    private void OnDisable()
+    {
+        uiShowTrigger.OnShow -= SetActive;
+        uiShowTrigger.OnHide -= SetInactive;
+    }
+
     private void SetActive()
     {
         active = true;
         backgroundSliderImage.fillAmount = fillAmountPerTick / maxFillAmount;
+
+        PlayerInteractor.OnInteract += Interaction;
     }
 
     private void SetInactive()
@@ -56,7 +65,10 @@ public class Station : MonoBehaviour
         active = false;
         messy = false;
         claimed = false;
+
+        PlayerInteractor.OnInteract += Interaction;
     }
+    #endregion
 
     //sets
     public void SetClaimed()
@@ -80,9 +92,9 @@ public class Station : MonoBehaviour
     }
 
     //using when active
-    private void Interaction(InputAction.CallbackContext ctx)
+    private void Interaction()
     {
-        if (!active && !messy) //change to || when not testing
+        if (!active ||!messy)
             return;
 
         curFillAmount += fillAmountPerTick;

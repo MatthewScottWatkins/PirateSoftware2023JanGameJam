@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [CreateAssetMenu(menuName = "States/State")]
 public class State : ScriptableObject
 {
-    [SerializeField] private State nextState;
+    [SerializeField] protected int nextStateIndex;
     [SerializeField] protected Optional<string> animationName;
     [HideInInspector] public NavMeshAgent agent;
     protected StateMachine owner;
