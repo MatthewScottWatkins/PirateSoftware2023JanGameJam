@@ -11,7 +11,10 @@ public class SeekingState : State
     public override void OnEnter()
     {
         base.OnEnter();
-        owner.SetTargetStation(FindObjectOfType<StationManager>().GetRandomStation()); //will change to random excluded
+        Station attemptStation = FindObjectOfType<StationManager>().GetRandomStation();
+        if (attemptStation == null)
+            return;
+        owner.SetTargetStation(attemptStation);
 
         targetStation = owner.GetTargetStation();
         targetStation.SetClaimed();

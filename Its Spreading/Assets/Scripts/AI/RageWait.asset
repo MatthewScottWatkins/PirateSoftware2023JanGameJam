@@ -17,4 +17,9 @@ MonoBehaviour:
     enabled: 0
     val: 
   agent: {fileID: 0}
-  waitLength: 1
+  waitLengths:
+  - 3
+  - 2
+  - 1
+  - 0.5
+  - 0.3

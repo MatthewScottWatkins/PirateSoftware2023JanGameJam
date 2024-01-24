@@ -22,6 +22,11 @@ public class ChildHungerManager : MonoBehaviour
     [SerializeField] private float[] hungerSegments;
     [SerializeField] private float[] hungerSpeeds;
 
+    //events
+    public event Action OnHungerChange;
+    private int hungerIndex;
+    private int lastHungerIndex;
+
     private void Start()
     {
         curFillAmount = maxFillAmount;
@@ -42,20 +47,35 @@ public class ChildHungerManager : MonoBehaviour
         if (curFillAmount <= 0)
             curFillAmount = 0;
 
-        agent.speed = hungerSpeeds[GetHungerIndex() ];
+
+        agent.speed = hungerSpeeds[GetHungerIndex()];
 
     }
 
-    int GetHungerIndex()
+    public int GetHungerIndex()
     {
         for(int i = 0; i < hungerSegments.Length; i++)
         {
             if(hungerSegments[i + 1] <= 0)
             {
+                hungerIndex = i;
+                if(hungerIndex != lastHungerIndex)
+                {
+                    lastHungerIndex = hungerIndex;
+                    OnHungerChange?.Invoke();
+                }
+
                 return i;
             }
             if(curFillAmount < hungerSegments[i] && curFillAmount > hungerSegments[i + 1])
             {
+                hungerIndex = i;
+                if (hungerIndex != lastHungerIndex)
+                {
+                    lastHungerIndex = hungerIndex;
+                    OnHungerChange?.Invoke();
+                }
+
                 return i;
             }
         }

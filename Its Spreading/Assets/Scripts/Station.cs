@@ -63,10 +63,8 @@ public class Station : MonoBehaviour
     private void SetInactive()
     {
         active = false;
-        messy = false;
-        claimed = false;
 
-        PlayerInteractor.OnInteract += Interaction;
+        PlayerInteractor.OnInteract -= Interaction;
     }
     #endregion
 
@@ -104,6 +102,11 @@ public class Station : MonoBehaviour
         //if full, turn off
         if(curFillAmount >= maxFillAmount)
         {
+            messy = false;
+            claimed = false;
+            curFillAmount = 0;
+            sliderImage.fillAmount = 0;
+            backgroundSliderImage.fillAmount = fillAmountPerTick;
             OnSetClean?.Invoke(); 
             uiShowTrigger.HideUI();
             //change sprite to clean sprite

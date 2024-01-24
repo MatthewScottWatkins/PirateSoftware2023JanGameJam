@@ -11,6 +11,7 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private State[] states;
     [SerializeField] private Animator animator;
     [SerializeField] private UIShowTrigger uiShow;
+    [SerializeField] private ChildHungerManager childHungerManager;
     private Station targetStation;
 
     private State curState;
@@ -30,12 +31,16 @@ public class StateMachine : MonoBehaviour
     {
         uiShow.OnShow += SetActive;
         uiShow.OnHide += SetInactive;
+
+        childHungerManager.OnHungerChange += SetHungerVariables;
     }
 
     private void OnDisable()
     {
         uiShow.OnShow -= SetActive;
         uiShow.OnHide -= SetInactive;
+
+        childHungerManager.OnHungerChange -= SetHungerVariables;
     }
 
     private void SetActive()
@@ -46,6 +51,27 @@ public class StateMachine : MonoBehaviour
     {
         PlayerInteractor.OnInteract -= OnInteract;
     }
+
+    private void SetHungerVariables()
+    {
+        //on hunger index change, foreach wait state, decrease the time the child waits
+        foreach(State state in states)
+        {
+            WaitingState wait = state as WaitingState;
+            if(wait != null)
+            {
+                wait.SetWaitIndex(childHungerManager.GetHungerIndex());
+            }
+        }
+    }
+
+    public void SetState(int newStateIndex)
+    {
+        curState?.OnExit();
+        curState = states[newStateIndex];
+        curState.OnEnter();
+    }
+
     #endregion
 
     private void Start()
@@ -64,12 +90,7 @@ public class StateMachine : MonoBehaviour
         SetState(0);
     }
 
-    public void SetState(int newStateIndex) 
-    {
-        curState?.OnExit();
-        curState = states[newStateIndex];  
-        curState.OnEnter(); 
-    }
+
 
     private void Update()
     {
