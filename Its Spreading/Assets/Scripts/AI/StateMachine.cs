@@ -23,6 +23,7 @@ public class StateMachine : MonoBehaviour
     public Animator GetAnimator() { return animator; }
     public Station GetTargetStation() { return targetStation; }
     public void SetTargetStation(Station newStation) { targetStation = newStation; }
+    public ChildHungerManager GetHungerManager() { return childHungerManager; }
 
     #region events
 
@@ -33,6 +34,7 @@ public class StateMachine : MonoBehaviour
         uiShow.OnHide += SetInactive;
 
         childHungerManager.OnHungerChange += SetHungerVariables;
+        KitchenPoint.OnFinishCook += SetGoEat;
     }
 
     private void OnDisable()
@@ -41,6 +43,7 @@ public class StateMachine : MonoBehaviour
         uiShow.OnHide -= SetInactive;
 
         childHungerManager.OnHungerChange -= SetHungerVariables;
+        KitchenPoint.OnFinishCook -= SetGoEat;
     }
 
     private void SetActive()
@@ -50,6 +53,13 @@ public class StateMachine : MonoBehaviour
     private void SetInactive()
     {
         PlayerInteractor.OnInteract -= OnInteract;
+    }
+
+    private void SetGoEat()
+    {
+        curState.OnExit();
+        curState = states[5];
+        curState.OnEnter();
     }
 
     private void SetHungerVariables()
@@ -89,8 +99,6 @@ public class StateMachine : MonoBehaviour
         //start on seeking
         SetState(0);
     }
-
-
 
     private void Update()
     {

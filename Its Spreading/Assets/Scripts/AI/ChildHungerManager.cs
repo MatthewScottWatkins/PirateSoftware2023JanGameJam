@@ -87,7 +87,7 @@ public class ChildHungerManager : MonoBehaviour
         hungerBar.fillAmount = curFillAmount / maxFillAmount;
     }
 
-    private void FillHunger()
+    public void FillHunger()
     {
         curFillAmount = maxFillAmount;
         UpdateUI();

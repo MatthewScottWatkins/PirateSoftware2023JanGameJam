@@ -8,7 +8,7 @@ using System;
 
 public class Station : MonoBehaviour
 {
-    //refs
+    [Header("Refs")]
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
     [SerializeField] private UIShowTrigger uiShowTrigger;
@@ -29,15 +29,6 @@ public class Station : MonoBehaviour
     //gets
     public bool GetMessyBool() { return messy; }
     public bool GetClaimedBool() { return claimed; }
-
-
-    //private void Start()
-    //{
-    //    controls = new Controls();
-
-    //    controls.Player.Interaction.performed += Interaction;
-    //    controls.Enable();
-    //}
 
     #region events
     private void OnEnable()

@@ -18,6 +18,7 @@ public class GoToState : State
     
     public override void OnEnter()
     {
+        base.OnEnter();
         switch (goToTarget)
         {
             case GoToTarget.Room:

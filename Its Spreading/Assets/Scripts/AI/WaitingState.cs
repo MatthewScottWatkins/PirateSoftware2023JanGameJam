@@ -8,15 +8,14 @@ public class WaitingState : State
 {
     [SerializeField] private float[] waitLengths;
     [SerializeField] private bool messySetter;
+    [SerializeField] private bool eatingWait;
     private int waitIndex;
 
     private float lastWait;
 
-
     public void SetWaitIndex(int val)
     {
         waitIndex = val;
-        Debug.Log(waitIndex);
     }
 
     public override void OnEnter()
@@ -30,7 +29,9 @@ public class WaitingState : State
         if(Time.time - lastWait > waitLengths[waitIndex])
         {
             if(messySetter)
-            owner.GetTargetStation().SetMessy();
+                owner.GetTargetStation().SetMessy();
+            if (eatingWait)
+                owner.GetHungerManager().FillHunger();
 
             //OnExit();
             owner.SetState(nextStateIndex);
