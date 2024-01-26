@@ -30,6 +30,11 @@ public class CooldownManager : MonoBehaviour
         KitchenPoint.OnFinishCook -= SetCanCook;
     }
 
+    private void Start()
+    {
+        canCook = true;
+    }
+
     private void Update()
     {
         //reset cook

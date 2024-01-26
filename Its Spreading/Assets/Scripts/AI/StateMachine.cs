@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
-using System;
 
 public class StateMachine : MonoBehaviour
 {
@@ -44,10 +42,6 @@ public class StateMachine : MonoBehaviour
 
     private void SetGoEat()
     {
-        if (!cooldownManager.GetCanCook())
-            return;
-
-        cooldownManager.SetCanCook();
         targetStation.SetClaimed(false);
 
         curState.OnExit();

@@ -340,8 +340,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   stoppingDrag: 5
-  stunDuration: 1
-  stunCooldown: 1
+  stunDuration: 5
+  stunCooldown: 5
 --- !u!95 &9068463997258642351
 Animator:
   serializedVersion: 5

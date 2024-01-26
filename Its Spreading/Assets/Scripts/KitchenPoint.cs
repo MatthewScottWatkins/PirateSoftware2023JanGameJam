@@ -11,6 +11,7 @@ public class KitchenPoint : MonoBehaviour
     [SerializeField] private UIShowTrigger uiShow;
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
+    [SerializeField] private Transform GoToPoint;
     private CooldownManager cooldownManager;
 
     //stats
@@ -52,6 +53,8 @@ public class KitchenPoint : MonoBehaviour
     }
     #endregion
 
+    public Transform GetGoToPoint() { return GoToPoint; }
+
     private void Interaction()
     {
         if (!active)
@@ -72,6 +75,7 @@ public class KitchenPoint : MonoBehaviour
             backgroundSliderImage.fillAmount = fillAmountPerTick;
             OnFinishCook?.Invoke();
             uiShow.HideUI();
+            cooldownManager.SetCanCook();
         }
 
     }

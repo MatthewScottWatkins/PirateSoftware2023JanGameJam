@@ -25,7 +25,7 @@ public class GoToState : State
                 agent.SetDestination(FindObjectOfType<RoomPoint>().gameObject.transform.position);
                 break;
             case GoToTarget.Kitchen:
-                agent.SetDestination(FindObjectOfType<KitchenPoint>().gameObject.transform.position);
+                agent.SetDestination(FindObjectOfType<KitchenPoint>().GetGoToPoint().position);
                 break;
         }
     }
