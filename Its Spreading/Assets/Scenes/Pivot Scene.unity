@@ -542,6 +542,16 @@ PrefabInstance:
       propertyPath: hungerSpeeds.Array.data[4]
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7248395436213635686, guid: 718841156ea4aac45a49e8965229d3c2,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248395436213635686, guid: 718841156ea4aac45a49e8965229d3c2,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718841156ea4aac45a49e8965229d3c2, type: 3}
 --- !u!1 &89834915 stripped
@@ -595,6 +605,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6049769134359730786, guid: 0c84d08d36baf9b4a9e2d30883849898,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
         type: 3}
       propertyPath: hungerBar
