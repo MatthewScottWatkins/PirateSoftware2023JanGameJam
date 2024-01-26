@@ -21,6 +21,7 @@ public class Station : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float maxFillAmount;
     [SerializeField] private float fillAmountPerTick;
+    [SerializeField] private float[] messTimes;
     private float curFillAmount;
     private bool active = false;
     [SerializeField] private bool messy = false;
@@ -29,6 +30,7 @@ public class Station : MonoBehaviour
     //gets
     public bool GetMessyBool() { return messy; }
     public bool GetClaimedBool() { return claimed; }
+    public float[] GetMessTimes() { return messTimes; }
 
     #region events
     private void OnEnable()
@@ -60,9 +62,9 @@ public class Station : MonoBehaviour
     #endregion
 
     //sets
-    public void SetClaimed()
+    public void SetClaimed(bool val)
     {
-        claimed = true;
+        claimed = val;
     }
 
     public void SetMessy()
