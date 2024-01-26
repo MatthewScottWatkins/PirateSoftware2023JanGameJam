@@ -10,6 +10,7 @@ public class PlayerInteractor : MonoBehaviour
     public static event Action OnInteract;
     public static event Action OnRage;
     private Controls controls;
+    [SerializeField] private CooldownManager cooldownManager;
 
     private void OnEnable()
     {
@@ -31,7 +32,11 @@ public class PlayerInteractor : MonoBehaviour
     }
     public void Rage(InputAction.CallbackContext ctx)
     {
-        OnRage?.Invoke();
+        if (cooldownManager.GetCanSendToRoom())
+        {
+            OnRage?.Invoke();
+        }
+
     }
 
 }

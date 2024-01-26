@@ -17,4 +17,4 @@ MonoBehaviour:
     enabled: 0
     val: 
   agent: {fileID: 0}
-  stopRange: 2
+  stopDistance: 0.1

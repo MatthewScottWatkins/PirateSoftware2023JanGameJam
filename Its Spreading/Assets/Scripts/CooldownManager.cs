@@ -27,6 +27,7 @@ public class CooldownManager : MonoBehaviour
     private void OnDisable()
     {
         StateMachine.OnSendToRoom -= SetCanSendToRoom;
+        KitchenPoint.OnFinishCook -= SetCanCook;
     }
 
     private void Update()

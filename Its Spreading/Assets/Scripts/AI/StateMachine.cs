@@ -37,7 +37,7 @@ public class StateMachine : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerInteractor.OnRage += OnInteract;
+        PlayerInteractor.OnRage -= OnInteract;
 
         KitchenPoint.OnFinishCook -= SetGoEat;
     }
@@ -94,8 +94,7 @@ public class StateMachine : MonoBehaviour
 
     private void OnInteract()
     {
-        if (!cooldownManager.GetCanSendToRoom())
-            return;
+        Debug.Log("Rage");
 
         //change state(rage wait)
         SetState(2);
