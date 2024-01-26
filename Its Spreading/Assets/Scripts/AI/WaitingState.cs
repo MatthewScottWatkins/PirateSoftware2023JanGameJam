@@ -13,20 +13,21 @@ public class WaitingState : State
 
     private float lastWait;
 
-    public void SetWaitIndex(int val)
-    {
-        waitIndex = val;
-    }
+    //public void SetWaitIndex(int val)
+    //{
+    //    waitIndex = val;
+    //}
 
     public override void OnEnter()
     {
         base.OnEnter();
         lastWait = Time.time;
+        waitLengths = owner.GetTargetStation().GetMessTimes();
     }
 
     public override void OnTick()
     {
-        if(Time.time - lastWait > waitLengths[waitIndex])
+        if (Time.time - lastWait > waitLengths[owner.GetHungerManager().GetHungerIndex()])
         {
             if(messySetter)
                 owner.GetTargetStation().SetMessy();

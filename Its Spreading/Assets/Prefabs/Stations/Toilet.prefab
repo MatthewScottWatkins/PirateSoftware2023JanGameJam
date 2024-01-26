@@ -15,12 +15,12 @@ PrefabInstance:
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.685
       objectReference: {fileID: 0}
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 15.187
       objectReference: {fileID: 0}
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
@@ -65,7 +65,18 @@ PrefabInstance:
     - target: {fileID: 3819890628603520274, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_Name
-      value: Station Base
+      value: Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819890629686810386, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -141791543, guid: 30f1dd71aa7f5b04b81a15b45606d8bc,
+        type: 3}
+    - target: {fileID: 3819890629686810386, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5479d60fc61892343bcd849c49ecac94, type: 3}
