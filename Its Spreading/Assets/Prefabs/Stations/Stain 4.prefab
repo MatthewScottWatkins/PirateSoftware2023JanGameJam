@@ -71,6 +71,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stain 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3819890628603520275, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: gameType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3819890629686810386, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_Sprite
