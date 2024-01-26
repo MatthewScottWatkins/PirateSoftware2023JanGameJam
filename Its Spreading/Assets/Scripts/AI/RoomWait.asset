@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextStateIndex: 0
   animationName:
-    enabled: 0
-    val: 
+    enabled: 1
+    val: Sulk
   agent: {fileID: 0}
   waitLengths:
-  - 5
-  - 5
-  - 5
-  - 3
-  - 2
+  - 30
+  - 23.5
+  - 14
+  - 9
+  - 4
   messySetter: 0
   eatingWait: 0
   roomWait: 1

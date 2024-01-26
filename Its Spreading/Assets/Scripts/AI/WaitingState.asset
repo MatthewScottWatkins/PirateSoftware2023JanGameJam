@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextStateIndex: 0
   animationName:
-    enabled: 0
-    val: 
+    enabled: 1
+    val: Messy
   agent: {fileID: 0}
   waitLengths:
   - 4
@@ -24,3 +24,5 @@ MonoBehaviour:
   - 1
   - 0.1
   messySetter: 1
+  eatingWait: 0
+  roomWait: 0

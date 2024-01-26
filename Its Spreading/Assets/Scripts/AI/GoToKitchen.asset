@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextStateIndex: 6
   animationName:
-    enabled: 0
-    val: 
+    enabled: 1
+    val: Enter Eat
   agent: {fileID: 0}
   goToTarget: 1
   stopDistance: 2

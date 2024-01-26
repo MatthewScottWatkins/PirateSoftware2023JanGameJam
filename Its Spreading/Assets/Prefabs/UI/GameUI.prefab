@@ -1517,6 +1517,8 @@ MonoBehaviour:
   image: {fileID: 3659418768770061326}
   faces:
   - {fileID: -547957077, guid: 380f49956351d09498f7031533bd2419, type: 3}
+  - {fileID: -547957077, guid: 380f49956351d09498f7031533bd2419, type: 3}
+  - {fileID: -1100852157, guid: 380f49956351d09498f7031533bd2419, type: 3}
   - {fileID: -1100852157, guid: 380f49956351d09498f7031533bd2419, type: 3}
   - {fileID: 856672685, guid: 380f49956351d09498f7031533bd2419, type: 3}
   hungymanager: {fileID: 0}
@@ -1612,6 +1614,8 @@ MonoBehaviour:
   image: {fileID: 688595666309402389}
   faces:
   - {fileID: -1584609172, guid: 380f49956351d09498f7031533bd2419, type: 3}
+  - {fileID: -1584609172, guid: 380f49956351d09498f7031533bd2419, type: 3}
+  - {fileID: -157945653, guid: 380f49956351d09498f7031533bd2419, type: 3}
   - {fileID: -157945653, guid: 380f49956351d09498f7031533bd2419, type: 3}
   - {fileID: -1522627148, guid: 380f49956351d09498f7031533bd2419, type: 3}
   hungymanager: {fileID: 0}

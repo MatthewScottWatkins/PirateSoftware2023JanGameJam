@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextStateIndex: 0
   animationName:
-    enabled: 0
-    val: 
+    enabled: 1
+    val: Eating
   agent: {fileID: 0}
   waitLengths:
-  - 1
-  - 1
-  - 1
-  - 1
+  - 15
+  - 10
+  - 7
+  - 5
   messySetter: 0
   eatingWait: 1
+  roomWait: 0

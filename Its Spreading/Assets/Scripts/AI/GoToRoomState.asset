@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextStateIndex: 4
   animationName:
-    enabled: 0
-    val: 
+    enabled: 1
+    val: Sulk
   agent: {fileID: 0}
   goToTarget: 0
   stopDistance: 2
