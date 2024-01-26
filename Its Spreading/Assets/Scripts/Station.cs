@@ -108,6 +108,12 @@ public class Station : MonoBehaviour
         curFillAmount = 0;
         sliderImage.fillAmount = 0;
 
+
+        if(TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
+        {
+            hazard.enabled = true;
+        }
+
         //change sprite to messy sprite
     }
 
@@ -131,6 +137,11 @@ public class Station : MonoBehaviour
             backgroundSliderImage.fillAmount = fillAmountPerTick;
             OnSetClean?.Invoke(); 
             uiShowTrigger.HideUI();
+
+            if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
+            {
+                hazard.enabled = true;
+            }
             //change sprite to clean sprite
         }
     }

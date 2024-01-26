@@ -6,9 +6,12 @@ using System;
 [CreateAssetMenu(fileName = "State", menuName = "States/WaitingState")]
 public class WaitingState : State
 {
+    private RoomPoint roomPoint;
+
     [SerializeField] private float[] waitLengths;
     [SerializeField] private bool messySetter;
     [SerializeField] private bool eatingWait;
+    [SerializeField] private bool roomWait;
     private int waitIndex;
 
     private float lastWait;
@@ -22,11 +25,17 @@ public class WaitingState : State
     {
         base.OnEnter();
         lastWait = Time.time;
+        if(messySetter)
         waitLengths = owner.GetTargetStation().GetMessTimes();
+
+        roomPoint = FindObjectOfType<RoomPoint>();
     }
 
     public override void OnTick()
     {
+        if (roomWait)
+            agent.SetDestination(roomPoint.transform.position);
+
         if (Time.time - lastWait > waitLengths[owner.GetHungerManager().GetHungerIndex()])
         {
             if(messySetter)

@@ -18,8 +18,11 @@ MonoBehaviour:
     val: 
   agent: {fileID: 0}
   waitLengths:
-  - 10
-  - 8
-  - 6
-  - 4
+  - 5
+  - 5
+  - 5
   - 3
+  - 2
+  messySetter: 0
+  eatingWait: 0
+  roomWait: 1
