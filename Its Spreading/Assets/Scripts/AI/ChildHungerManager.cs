@@ -29,10 +29,7 @@ public class ChildHungerManager : MonoBehaviour
 
     private void Start()
     {
-        curFillAmount = maxFillAmount;
-
-
-        //Cooking.onfinishcooking += FillHunger
+        curFillAmount = maxFillAmount;        
     }
 
     private void Update()

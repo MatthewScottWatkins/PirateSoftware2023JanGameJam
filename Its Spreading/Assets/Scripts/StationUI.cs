@@ -10,12 +10,18 @@ public class StationUI : MonoBehaviour
     private int stationCount;
     private int messyCount;
 
-
-    private void Start()
+    private void OnEnable()
     {
         stationCount = FindObjectOfType<StationManager>().GetStationCount();
         Station.OnSetMessy += IncreaseMess;
         Station.OnSetClean += ReduceMess;
+    }
+
+    private void OnDisable()
+    {
+        stationCount = FindObjectOfType<StationManager>().GetStationCount();
+        Station.OnSetMessy -= IncreaseMess;
+        Station.OnSetClean -= ReduceMess;
     }
 
     void IncreaseMess()
