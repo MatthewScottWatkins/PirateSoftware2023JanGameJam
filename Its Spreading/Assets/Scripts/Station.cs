@@ -18,6 +18,7 @@ public class Station : MonoBehaviour, IMovementController
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
     [SerializeField] private UIShowTrigger uiShowTrigger;
+    public StationSpriteChanger stationState;
     private Controls controls;
 
     //events
@@ -118,7 +119,7 @@ public class Station : MonoBehaviour, IMovementController
             hazard.enabled = true;
         }
 
-        //change sprite to messy sprite
+        stationState.ChangeSpriteMessy();
 
     }
 

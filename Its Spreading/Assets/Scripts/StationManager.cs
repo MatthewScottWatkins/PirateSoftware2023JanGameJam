@@ -8,6 +8,17 @@ public class StationManager : MonoBehaviour
 
     public int GetStationCount() { return stations.Length; }
 
+    public void Awake()
+    {
+        foreach (Station station in stations)
+        {
+            if (!station.GetMessyBool())
+            {
+                station.stationState.ChangeSpriteCleaned();
+            }
+        }
+    }
+
     public Station GetRandomStation() 
     {
         List<Station> availableStations = new List<Station>();

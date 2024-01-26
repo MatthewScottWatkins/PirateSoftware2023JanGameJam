@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3819890628603520274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.73, y: 12.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51,6 +51,7 @@ MonoBehaviour:
   sliderImage: {fileID: 3819890629474341855}
   backgroundSliderImage: {fileID: 3819890628682451404}
   uiShowTrigger: {fileID: 7959849091452957803}
+  stationState: {fileID: 8237513907872687950}
   gameType: 1
   maxFillAmount: 100
   fillAmountPerTick: 10

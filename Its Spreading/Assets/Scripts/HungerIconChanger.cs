@@ -7,6 +7,7 @@ public class HungerIconChanger : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Sprite[] faces;
+    [SerializeField] private ChildHungerManager hungymanager;
 
 
     private void OnEnable()
@@ -21,6 +22,6 @@ public class HungerIconChanger : MonoBehaviour
 
     private void ChangeIcon()
     {
-        image.sprite = faces[FindObjectOfType<ChildHungerManager>().GetHungerIndex()];
+        image.sprite = faces[hungymanager.GetHungerIndex()];
     }
 }

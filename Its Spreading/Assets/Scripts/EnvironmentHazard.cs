@@ -6,8 +6,7 @@ using UnityEngine.Events;
 
 public class EnvironmentHazard : MonoBehaviour
 {
-    public static Action OnStun;
-    
+    public static Action OnStun;  
 
     private void OnTriggerEnter2D(Collider2D other)
     {

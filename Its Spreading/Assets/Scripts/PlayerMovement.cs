@@ -123,8 +123,8 @@ public class PlayerMovement : MonoBehaviour
     private void OnStunned()
     {
         if (!canBeStunned || stunned)
-            return; 
-
+            return;
+        animator.SetTrigger("Stun");
         canBeStunned = false;
         stunned = true;
         lastStun = Time.time;

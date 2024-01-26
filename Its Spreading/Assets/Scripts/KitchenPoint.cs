@@ -12,7 +12,11 @@ public class KitchenPoint : MonoBehaviour, IMovementController
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
     [SerializeField] private Transform GoToPoint;
+    [SerializeField] private SpriteRenderer Table;
     private CooldownManager cooldownManager;
+
+    public Sprite emptyTableSprite;
+    public Sprite fullTableSprite;
 
     //stats
     private bool active;
@@ -75,7 +79,7 @@ public class KitchenPoint : MonoBehaviour, IMovementController
         {
             curFillAmount = 0;
             sliderImage.fillAmount = 0;
-            backgroundSliderImage.fillAmount = fillAmountPerTick;
+            backgroundSliderImage.fillAmount = 0 + fillAmountPerTick;
             OnFinishCook?.Invoke();
             uiShow.HideUI();
             cooldownManager.SetCanCook();
@@ -85,6 +89,10 @@ public class KitchenPoint : MonoBehaviour, IMovementController
 
     public void TriggerMovement()
     {
+        Table.sprite = fullTableSprite;
+
         OnMovementStop?.Invoke();
+
+        Table.sprite = emptyTableSprite;
     }
 }
