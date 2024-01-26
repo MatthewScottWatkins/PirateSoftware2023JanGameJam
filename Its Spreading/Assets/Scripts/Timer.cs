@@ -10,8 +10,13 @@ public class Timer : MonoBehaviour
     [SerializeField] private float maxTime;
     private float timer;
 
-    //probably add event for start
+    private StationUI messyBar;
 
+    //probably add event for start
+    private void Awake()
+    {
+        messyBar = FindObjectOfType<StationUI>();
+    }
 
     private void Start()
     {
@@ -40,7 +45,14 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            //win
+            if (messyBar.statusIndex >= 2)
+            {
+                //lose
+            }
+            else
+            {
+                //win
+            }
         }
     }
 }
