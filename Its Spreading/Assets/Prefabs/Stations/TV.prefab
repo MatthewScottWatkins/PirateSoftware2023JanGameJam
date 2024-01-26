@@ -165,6 +165,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1190195243, guid: 117925b2e4db69b4faf18fc24929a1ec,
         type: 3}
+    - target: {fileID: 8237513907872687950, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: cleanSprite
+      value: 
+      objectReference: {fileID: 1190195243, guid: 117925b2e4db69b4faf18fc24929a1ec,
+        type: 3}
+    - target: {fileID: 8237513907872687950, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: animatedSprite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5479d60fc61892343bcd849c49ecac94, type: 3}
 --- !u!4 &6007393749006098073 stripped
