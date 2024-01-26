@@ -11,6 +11,8 @@ public class UIShowTrigger : MonoBehaviour, Iinteractable
     public event Action OnShow;
     public event Action OnHide;
 
+    public GameObject GetUIObject() { return uiObject; }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
