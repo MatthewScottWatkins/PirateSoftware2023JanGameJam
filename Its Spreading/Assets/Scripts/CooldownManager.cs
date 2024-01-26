@@ -15,8 +15,20 @@ public class CooldownManager : MonoBehaviour
     public bool GetCanSendToRoom() { return canSendToRoom; }
     public bool GetCanCook() { return canCook; }
     //sets
-    public void SetCanSendToRoom(bool val) { canSendToRoom = val; lastSendToRoom = Time.time; }
-    public void setCanCook(bool val) { canCook = val; lastCook = Time.time; }
+    public void SetCanSendToRoom() { canSendToRoom = false; lastSendToRoom = Time.time; }
+    public void SetCanCook() { canCook = false; lastCook = Time.time; }
+
+    private void OnEnable()
+    {
+        StateMachine.OnSendToRoom += SetCanSendToRoom;
+        KitchenPoint.OnFinishCook += SetCanCook;
+    }
+
+    private void OnDisable()
+    {
+        StateMachine.OnSendToRoom -= SetCanSendToRoom;
+        KitchenPoint.OnFinishCook -= SetCanCook;
+    }
 
     private void Update()
     {

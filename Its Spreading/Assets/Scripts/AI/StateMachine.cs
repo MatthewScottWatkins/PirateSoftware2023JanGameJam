@@ -10,7 +10,6 @@ public class StateMachine : MonoBehaviour
     [Tooltip("Set in order of seeking, waiting, rage waiting, gotoroom, gotokitchen, kitchen wait")]
     [SerializeField] private State[] states;
     [SerializeField] private Animator animator;
-    [SerializeField] private UIShowTrigger uiShow;
     [SerializeField] private ChildHungerManager childHungerManager;
     private CooldownManager cooldownManager;
     private Station targetStation;
@@ -31,29 +30,16 @@ public class StateMachine : MonoBehaviour
     public static event Action OnSendToRoom;
     private void OnEnable()
     {
-        uiShow.OnShow += SetActive;
-        uiShow.OnHide += SetInactive;
+        PlayerInteractor.OnRage += OnInteract;
 
-        childHungerManager.OnHungerChange += SetHungerVariables;
         KitchenPoint.OnFinishCook += SetGoEat;
     }
 
     private void OnDisable()
     {
-        uiShow.OnShow -= SetActive;
-        uiShow.OnHide -= SetInactive;
+        PlayerInteractor.OnRage -= OnInteract;
 
-        childHungerManager.OnHungerChange -= SetHungerVariables;
         KitchenPoint.OnFinishCook -= SetGoEat;
-    }
-
-    private void SetActive()
-    {
-        PlayerInteractor.OnInteract += OnInteract;
-    }
-    private void SetInactive()
-    {
-        PlayerInteractor.OnInteract -= OnInteract;
     }
 
     private void SetGoEat()
@@ -61,25 +47,12 @@ public class StateMachine : MonoBehaviour
         if (!cooldownManager.GetCanCook())
             return;
 
-        cooldownManager.setCanCook(false);
+        cooldownManager.SetCanCook();
         targetStation.SetClaimed(false);
 
         curState.OnExit();
         curState = states[5];
         curState.OnEnter();
-    }
-
-    private void SetHungerVariables()
-    {
-        ////on hunger index change, foreach wait state, decrease the time the child waits
-        //foreach(State state in states)
-        //{
-        //    WaitingState wait = state as WaitingState;
-        //    if(wait != null)
-        //    {
-        //        wait.SetWaitIndex(childHungerManager.GetHungerIndex());
-        //    }
-        //}
     }
 
     public void SetState(int newStateIndex)
@@ -121,10 +94,7 @@ public class StateMachine : MonoBehaviour
 
     private void OnInteract()
     {
-        if (!cooldownManager.GetCanSendToRoom())
-            return;
-
-        cooldownManager.SetCanSendToRoom(false);
+        Debug.Log("Rage");
 
         //change state(rage wait)
         SetState(2);

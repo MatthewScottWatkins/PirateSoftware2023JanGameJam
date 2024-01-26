@@ -8,7 +8,9 @@ using UnityEngine.InputSystem;
 public class PlayerInteractor : MonoBehaviour
 {
     public static event Action OnInteract;
+    public static event Action OnRage;
     private Controls controls;
+    [SerializeField] private CooldownManager cooldownManager;
 
     private void OnEnable()
     {
@@ -20,12 +22,21 @@ public class PlayerInteractor : MonoBehaviour
         controls = new Controls();
 
         controls.Player.Interaction.performed += Interaction;
+        controls.Player.Rage.performed += Rage;
         controls.Enable();
     }
 
     public void Interaction(InputAction.CallbackContext ctx)
     {
         OnInteract?.Invoke();
+    }
+    public void Rage(InputAction.CallbackContext ctx)
+    {
+        if (cooldownManager.GetCanSendToRoom())
+        {
+            OnRage?.Invoke();
+        }
+
     }
 
 }
