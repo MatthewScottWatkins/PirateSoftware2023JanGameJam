@@ -6,6 +6,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using System;
 
+public enum StationGameType
+{
+    Spam,
+    BackandForth
+}
+
 public class Station : MonoBehaviour
 {
     [Header("Refs")]
@@ -19,6 +25,7 @@ public class Station : MonoBehaviour
     public static event Action OnSetClean;
 
     [Header("Stats")]
+    public StationGameType gameType;
     [SerializeField] private float maxFillAmount;
     [SerializeField] private float fillAmountPerTick;
     [SerializeField] private float[] messTimes;
@@ -26,6 +33,7 @@ public class Station : MonoBehaviour
     private bool active = false;
     [SerializeField] private bool messy = false;
     private bool claimed = false;
+    private bool curAction = false;
 
     //gets
     public bool GetMessyBool() { return messy; }
@@ -47,17 +55,38 @@ public class Station : MonoBehaviour
 
     private void SetActive()
     {
+        if (!messy)
+        {
+            uiShowTrigger.GetUIObject().SetActive(false);
+            return;
+        }
         active = true;
         backgroundSliderImage.fillAmount = fillAmountPerTick / maxFillAmount;
+        if(gameType == StationGameType.Spam)
+        {
+            PlayerInteractor.OnInteract += InteractionSpam;
+        }
+        if(gameType == StationGameType.BackandForth)
+        {
+            PlayerInteractor.OnInteract += InteractionBaFA;
+            PlayerInteractor.OnInteract += InteractiveBaFB;
+        }
 
-        PlayerInteractor.OnInteract += Interaction;
     }
 
     private void SetInactive()
     {
         active = false;
 
-        PlayerInteractor.OnInteract -= Interaction;
+        if (gameType == StationGameType.Spam)
+        {
+            PlayerInteractor.OnInteract -= InteractionSpam;
+        }
+        if (gameType == StationGameType.BackandForth)
+        {
+            PlayerInteractor.OnInteract -= InteractionBaFA;
+            PlayerInteractor.OnInteract -= InteractiveBaFB;
+        }
     }
     #endregion
 
@@ -83,7 +112,7 @@ public class Station : MonoBehaviour
     }
 
     //using when active
-    private void Interaction()
+    private void InteractionSpam()
     {
         if (!active ||!messy)
             return;
@@ -104,6 +133,22 @@ public class Station : MonoBehaviour
             uiShowTrigger.HideUI();
             //change sprite to clean sprite
         }
+    }
+
+    private void InteractionBaFA()
+    {
+        if (!active || !messy)
+            return;
+
+        //if Button B is press instead of button A return;
+        if (curAction == false)
+            return;
+    }
+
+    private void InteractiveBaFB()
+    {
+        if (!active || !messy)
+            return;
     }
 
 

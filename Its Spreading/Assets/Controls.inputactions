@@ -3,46 +3,102 @@
     "maps": [
         {
             "name": "Player",
-<<<<<<< HEAD
-            "id": "0add01d5-f8a9-4c51-98bf-e32b60b0b654",
-=======
-            "id": "2eb5b68e-4029-4d43-bc66-fc67faa5bff2",
->>>>>>> main
+            "id": "8469e1ab-551a-476b-ba48-7df55d581008",
             "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Value",
-<<<<<<< HEAD
-                    "id": "d2cfd578-a63c-46e2-a683-a30460cfa055",
-=======
-                    "id": "2c08f546-c4fc-45a0-9d22-0150228db7b4",
->>>>>>> main
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-<<<<<<< HEAD
-=======
-                },
                 {
                     "name": "Interaction",
                     "type": "Button",
-                    "id": "e449a56e-60bc-4bbf-bfb2-d8b535298d07",
+                    "id": "7c198896-9dfd-488f-bd0b-9ea9551c0d7a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
->>>>>>> main
+                },
+                {
+                    "name": "Rage",
+                    "type": "Button",
+                    "id": "7b59c92d-fd91-4d54-b839-89480959556b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InteractionBaFA",
+                    "type": "Button",
+                    "id": "7e406d32-1f8e-4ea0-a0d9-8170887be498",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InteractionBaFB",
+                    "type": "Button",
+                    "id": "c439f80d-0b70-4d55-b6e3-c3d7f440561f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "4eef3f6a-f3aa-4f40-a62b-4e50bb188398",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "WASD",
-<<<<<<< HEAD
-                    "id": "f861541b-3ccf-47b6-95f4-9f983ee720b1",
-=======
-                    "id": "a1109c3d-3ad3-495b-9baa-6405615fb782",
->>>>>>> main
+                    "name": "",
+                    "id": "2f838024-9dbc-43f5-928c-4ac4b235cb4a",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa3def9f-f4aa-46dd-b1a0-bf6c81e637c0",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Rage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6c74923-1d08-444c-b498-3969eaf1add8",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "InteractionBaFA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2711f04d-b559-4401-b5cb-be45015988a9",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "InteractionBaFB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "26c9483c-83a5-470d-bcbf-dcbb7c64b066",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -53,77 +109,47 @@
                 },
                 {
                     "name": "up",
-<<<<<<< HEAD
-                    "id": "cb650733-a427-4ffa-83f2-4680f8c47f16",
-=======
-                    "id": "acbc69dc-1764-46bd-b97d-6f1b84f22ef5",
->>>>>>> main
+                    "id": "dadff795-ac1a-41c7-b3df-0bd00687eb12",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard & Mouse",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-<<<<<<< HEAD
-                    "id": "35c178e9-fcfb-456c-bb4a-c3a92686aa8c",
-=======
-                    "id": "b9d68c9e-f120-4f46-9c8f-4138d824a34a",
->>>>>>> main
+                    "id": "7210fdf4-cf50-4b9b-a4cf-9d4a81c18de5",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard & Mouse",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-<<<<<<< HEAD
-                    "id": "df8d6f77-dc26-4cb9-9dee-0bec19675a31",
-=======
-                    "id": "d9b00c83-0a97-4662-a270-4751af4c83a3",
->>>>>>> main
+                    "id": "f742f8bc-0479-424e-8b97-c23381c37f4a",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard & Mouse",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-<<<<<<< HEAD
-                    "id": "2891875e-fbff-4706-9cb6-33eab86d29bc",
-=======
-                    "id": "4a180326-63ac-40d5-886e-210db6a094f3",
->>>>>>> main
+                    "id": "d61ddf59-7669-4352-9dbc-1fadb9982de4",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard & Mouse",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-<<<<<<< HEAD
-=======
-                },
-                {
-                    "name": "",
-                    "id": "eb0d6ab8-784e-4b40-b742-598028a8183b",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interaction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
->>>>>>> main
                 }
             ]
         }
