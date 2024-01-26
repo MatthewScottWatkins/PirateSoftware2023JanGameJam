@@ -12,6 +12,7 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private UIShowTrigger uiShow;
     [SerializeField] private ChildHungerManager childHungerManager;
+    private CooldownManager cooldownManager;
     private Station targetStation;
 
     private State curState;
@@ -57,6 +58,11 @@ public class StateMachine : MonoBehaviour
 
     private void SetGoEat()
     {
+        if (!cooldownManager.GetCanCook())
+            return;
+
+        cooldownManager.setCanCook(false);
+
         curState.OnExit();
         curState = states[5];
         curState.OnEnter();
@@ -84,6 +90,11 @@ public class StateMachine : MonoBehaviour
 
     #endregion
 
+    private void Awake()
+    {
+        cooldownManager = FindObjectOfType<CooldownManager>();
+    }
+
     private void Start()
     {
         //fix navmesh rotations
@@ -109,6 +120,11 @@ public class StateMachine : MonoBehaviour
 
     private void OnInteract()
     {
+        if (!cooldownManager.GetCanSendToRoom())
+            return;
+
+        cooldownManager.SetCanSendToRoom(false);
+
         //change state(rage wait)
         SetState(2);
 

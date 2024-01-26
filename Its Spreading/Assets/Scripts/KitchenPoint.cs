@@ -11,6 +11,7 @@ public class KitchenPoint : MonoBehaviour
     [SerializeField] private UIShowTrigger uiShow;
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
+    private CooldownManager cooldownManager;
 
     //stats
     private bool active;
@@ -19,6 +20,11 @@ public class KitchenPoint : MonoBehaviour
     private float curFillAmount;
 
     public static event Action OnFinishCook;
+
+    private void Awake()
+    {
+        cooldownManager = FindObjectOfType<CooldownManager>();
+    }
 
     #region events
     private void OnEnable()
@@ -49,6 +55,9 @@ public class KitchenPoint : MonoBehaviour
     private void Interaction()
     {
         if (!active)
+            return;
+
+        if (!cooldownManager.GetCanCook())
             return;
 
         curFillAmount += fillAmountPerTick;

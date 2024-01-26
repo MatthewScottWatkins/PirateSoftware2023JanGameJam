@@ -18,7 +18,10 @@ public class StationManager : MonoBehaviour
                 availableStations.Add(station);
             }
         }
-
+        if(availableStations.Count <= 1)
+        {
+            return availableStations[0];
+        }
         return availableStations[Random.Range(0, availableStations.Count)];
     }
 
