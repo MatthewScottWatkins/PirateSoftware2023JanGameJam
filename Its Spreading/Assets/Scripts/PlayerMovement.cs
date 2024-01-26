@@ -13,8 +13,25 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 previousInput;
 
     [Header("Stats")]
-    public float speed;
-    public float stoppingDrag;
+    [SerializeField] private float speed;
+    private float curSpeed;
+    [SerializeField] private float stoppingDrag;
+    [SerializeField] private float stunDuration;
+    [SerializeField] private float stunCooldown;
+    private float lastStun;
+    private float lastCooldown;
+    private bool canBeStunned = true;
+    private bool stunned = false;
+
+    private void OnEnable()
+    {
+        EnvironmentHazard.OnStun += OnStunned;
+    }
+
+    private void OnDisable()
+    {
+        EnvironmentHazard.OnStun -= OnStunned;
+    }
 
 
     private void Awake()
@@ -27,14 +44,15 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.Movement.performed += SetPreviousInput;
         controls.Player.Movement.canceled += SetPreviousInput;
         controls.Enable();
+
+        curSpeed = speed;
     }
 
     void Update()
     {
-
         if (previousInput != Vector2.zero)
         {
-            rb.AddForce(new Vector2(previousInput.x, previousInput.y) * speed, ForceMode2D.Force);
+            rb.AddForce(new Vector2(previousInput.x, previousInput.y) * curSpeed, ForceMode2D.Force);
 
             animator.SetTrigger("Walk");
 
@@ -53,10 +71,39 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        if (stunned)
+        {
+            if (Time.time - lastStun > stunDuration)
+            {
+                stunned = false;
+                lastCooldown = Time.time;
+                curSpeed = speed;
+            }
+        }
+
+        if (!canBeStunned)
+        {
+            if (Time.time - lastCooldown > stunCooldown)
+            {
+                canBeStunned = true;
+            }
+        }
     }
 
     private void SetPreviousInput(InputAction.CallbackContext ctx)
     {
         previousInput = ctx.ReadValue<Vector2>();
+    }
+
+    private void OnStunned()
+    {
+        if (!canBeStunned || stunned)
+            return; 
+
+        canBeStunned = false;
+        stunned = true;
+        lastStun = Time.time;
+        curSpeed = 0;
+        rb.velocity = Vector2.zero;
     }
 }
