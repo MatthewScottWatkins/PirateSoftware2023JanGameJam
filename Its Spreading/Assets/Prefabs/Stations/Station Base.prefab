@@ -51,6 +51,7 @@ MonoBehaviour:
   sliderImage: {fileID: 3819890629474341855}
   backgroundSliderImage: {fileID: 3819890628682451404}
   uiShowTrigger: {fileID: 7959849091452957803}
+  gameType: 1
   maxFillAmount: 100
   fillAmountPerTick: 10
   messTimes:
@@ -99,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3819890629686810389}
   - component: {fileID: 3819890629686810386}
+  - component: {fileID: 8237513907872687950}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -174,6 +176,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8237513907872687950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3819890629686810388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4658c445c98ce4f91a8df949758761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  station: {fileID: 3819890628603520275}
+  spriteRenderer: {fileID: 3819890629686810386}
+  cleanSprite: {fileID: 0}
+  messySprite: {fileID: 0}
+  animatedSprite: 0
 --- !u!1001 &3797228351833018864
 PrefabInstance:
   m_ObjectHideFlags: 0

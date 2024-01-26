@@ -12,7 +12,7 @@ public enum StationGameType
     BackandForth
 }
 
-public class Station : MonoBehaviour
+public class Station : MonoBehaviour, IMovementController
 {
     [Header("Refs")]
     [SerializeField] private Image sliderImage;
@@ -23,6 +23,9 @@ public class Station : MonoBehaviour
     //events
     public static event Action OnSetMessy;
     public static event Action OnSetClean;
+    public static event Action OnMovementStop;
+    public event Action OnCleaned;
+    public event Action OnMessy;
 
     [Header("Stats")]
     public StationGameType gameType;
@@ -68,8 +71,8 @@ public class Station : MonoBehaviour
         }
         if(gameType == StationGameType.BackandForth)
         {
-            PlayerInteractor.OnInteract += InteractionBaFA;
-            PlayerInteractor.OnInteract += InteractiveBaFB;
+            PlayerInteractor.OnInteractBaFA += InteractionBaFA;
+            PlayerInteractor.OnInteractBaFB += InteractiveBaFB;
         }
 
     }
@@ -84,8 +87,8 @@ public class Station : MonoBehaviour
         }
         if (gameType == StationGameType.BackandForth)
         {
-            PlayerInteractor.OnInteract -= InteractionBaFA;
-            PlayerInteractor.OnInteract -= InteractiveBaFB;
+            PlayerInteractor.OnInteractBaFA -= InteractionBaFA;
+            PlayerInteractor.OnInteractBaFB -= InteractiveBaFB;
         }
     }
     #endregion
@@ -102,6 +105,7 @@ public class Station : MonoBehaviour
             return;
 
         OnSetMessy?.Invoke();
+        OnMessy?.Invoke();
 
         //reset variables
         messy = true;
@@ -115,6 +119,7 @@ public class Station : MonoBehaviour
         }
 
         //change sprite to messy sprite
+
     }
 
     //using when active
@@ -122,6 +127,8 @@ public class Station : MonoBehaviour
     {
         if (!active ||!messy)
             return;
+
+
 
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;
@@ -136,6 +143,7 @@ public class Station : MonoBehaviour
             sliderImage.fillAmount = 0;
             backgroundSliderImage.fillAmount = fillAmountPerTick;
             OnSetClean?.Invoke(); 
+            OnCleaned?.Invoke();
             uiShowTrigger.HideUI();
 
             if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
@@ -154,13 +162,72 @@ public class Station : MonoBehaviour
         //if Button B is press instead of button A return;
         if (curAction == false)
             return;
+
+        curAction = false;
+
+        curFillAmount += fillAmountPerTick;
+        sliderImage.fillAmount = curFillAmount / maxFillAmount;
+        backgroundSliderImage.fillAmount = (curFillAmount + fillAmountPerTick) / maxFillAmount;
+
+        //if full, turn off
+        if (curFillAmount >= maxFillAmount)
+        {
+            messy = false;
+            claimed = false;
+            curFillAmount = 0;
+            sliderImage.fillAmount = 0;
+            backgroundSliderImage.fillAmount = fillAmountPerTick;
+            OnSetClean?.Invoke();
+            OnCleaned?.Invoke();
+            uiShowTrigger.HideUI();
+
+            if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
+            {
+                hazard.enabled = true;
+            }  
+        }
     }
 
     private void InteractiveBaFB()
     {
         if (!active || !messy)
             return;
+
+        //if Button A is press instead of button B return;
+        if (curAction == true)
+        {
+            return;
+        }
+
+        TriggerMovement();
+
+        curAction = true;
+
+        curFillAmount += fillAmountPerTick;
+        sliderImage.fillAmount = curFillAmount / maxFillAmount;
+        backgroundSliderImage.fillAmount = (curFillAmount + fillAmountPerTick) / maxFillAmount;
+
+        //if full, turn off
+        if (curFillAmount >= maxFillAmount)
+        {
+            messy = false;
+            claimed = false;
+            curFillAmount = 0;
+            sliderImage.fillAmount = 0;
+            backgroundSliderImage.fillAmount = fillAmountPerTick;
+            OnSetClean?.Invoke();
+            OnCleaned?.Invoke();
+            uiShowTrigger.HideUI();
+
+            if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
+            {
+                hazard.enabled = true;
+            }
+        }
     }
 
-
+    public void TriggerMovement()
+    {
+        OnMovementStop?.Invoke();
+    }
 }

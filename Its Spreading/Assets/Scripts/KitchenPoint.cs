@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System;
 
-public class KitchenPoint : MonoBehaviour
+public class KitchenPoint : MonoBehaviour, IMovementController
 {
     [Header("Refs")]
     [SerializeField] private UIShowTrigger uiShow;
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
+    [SerializeField] private Transform GoToPoint;
     private CooldownManager cooldownManager;
 
     //stats
@@ -20,6 +21,7 @@ public class KitchenPoint : MonoBehaviour
     private float curFillAmount;
 
     public static event Action OnFinishCook;
+    public static event Action OnMovementStop;
 
     private void Awake()
     {
@@ -52,6 +54,8 @@ public class KitchenPoint : MonoBehaviour
     }
     #endregion
 
+    public Transform GetGoToPoint() { return GoToPoint; }
+
     private void Interaction()
     {
         if (!active)
@@ -59,6 +63,8 @@ public class KitchenPoint : MonoBehaviour
 
         if (!cooldownManager.GetCanCook())
             return;
+
+        TriggerMovement();
 
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;
@@ -72,8 +78,13 @@ public class KitchenPoint : MonoBehaviour
             backgroundSliderImage.fillAmount = fillAmountPerTick;
             OnFinishCook?.Invoke();
             uiShow.HideUI();
+            cooldownManager.SetCanCook();
         }
 
     }
 
+    public void TriggerMovement()
+    {
+        OnMovementStop?.Invoke();
+    }
 }
