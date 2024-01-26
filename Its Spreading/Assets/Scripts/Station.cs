@@ -12,7 +12,7 @@ public enum StationGameType
     BackandForth
 }
 
-public class Station : MonoBehaviour
+public class Station : MonoBehaviour, IMovementController
 {
     [Header("Refs")]
     [SerializeField] private Image sliderImage;
@@ -23,6 +23,7 @@ public class Station : MonoBehaviour
     //events
     public static event Action OnSetMessy;
     public static event Action OnSetClean;
+    public static event Action OnMovementStop;
     public event Action OnCleaned;
     public event Action OnMessy;
 
@@ -104,6 +105,7 @@ public class Station : MonoBehaviour
             return;
 
         OnSetMessy?.Invoke();
+        OnMessy?.Invoke();
 
         //reset variables
         messy = true;
@@ -125,6 +127,8 @@ public class Station : MonoBehaviour
     {
         if (!active ||!messy)
             return;
+
+
 
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;
@@ -195,6 +199,8 @@ public class Station : MonoBehaviour
             return;
         }
 
+        TriggerMovement();
+
         curAction = true;
 
         curFillAmount += fillAmountPerTick;
@@ -220,5 +226,8 @@ public class Station : MonoBehaviour
         }
     }
 
-
+    public void TriggerMovement()
+    {
+        OnMovementStop?.Invoke();
+    }
 }

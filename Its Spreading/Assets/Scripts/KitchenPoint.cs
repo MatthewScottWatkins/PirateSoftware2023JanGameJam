@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System;
 
-public class KitchenPoint : MonoBehaviour
+public class KitchenPoint : MonoBehaviour, IMovementController
 {
     [Header("Refs")]
     [SerializeField] private UIShowTrigger uiShow;
@@ -21,6 +21,7 @@ public class KitchenPoint : MonoBehaviour
     private float curFillAmount;
 
     public static event Action OnFinishCook;
+    public static event Action OnMovementStop;
 
     private void Awake()
     {
@@ -63,6 +64,8 @@ public class KitchenPoint : MonoBehaviour
         if (!cooldownManager.GetCanCook())
             return;
 
+        TriggerMovement();
+
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;
         backgroundSliderImage.fillAmount = (curFillAmount + fillAmountPerTick) / maxFillAmount;
@@ -80,4 +83,8 @@ public class KitchenPoint : MonoBehaviour
 
     }
 
+    public void TriggerMovement()
+    {
+        OnMovementStop?.Invoke();
+    }
 }

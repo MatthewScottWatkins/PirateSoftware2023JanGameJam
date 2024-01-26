@@ -22,15 +22,30 @@ public class PlayerMovement : MonoBehaviour
     private float lastCooldown;
     private bool canBeStunned = true;
     private bool stunned = false;
+    private bool movementStopped= false;
+    private float lastStopped;
+    private float stoppedCooldown = 0.3f;
 
     private void OnEnable()
     {
+        KitchenPoint.OnMovementStop += StopMovement;
+        Station.OnMovementStop += StopMovement;
         EnvironmentHazard.OnStun += OnStunned;
     }
 
     private void OnDisable()
     {
+        KitchenPoint.OnMovementStop -= StopMovement;
+        Station.OnMovementStop -= StopMovement;
         EnvironmentHazard.OnStun -= OnStunned;
+    }
+
+    private void StopMovement()
+    {
+        movementStopped = true;
+        lastStopped = Time.time;
+        curSpeed = 0;
+        rb.velocity = Vector2.zero;
     }
 
 
@@ -70,7 +85,17 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = stoppingDrag;
         }
 
+        //movement stopped resets
+        if (movementStopped)
+        {
+            if(Time.time - lastStopped > stoppedCooldown)
+            {
+                movementStopped = false;
+                curSpeed = speed;
+            }
+        }
 
+        //stunned resets
         if (stunned)
         {
             if (Time.time - lastStun > stunDuration)
