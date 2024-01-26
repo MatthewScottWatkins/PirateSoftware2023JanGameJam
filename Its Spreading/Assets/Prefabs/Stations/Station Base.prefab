@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   station: {fileID: 3819890628603520275}
   spriteRenderer: {fileID: 3819890629686810386}
-  cleanSprite: {fileID: 0}
+  cleanSprite: {fileID: 21300000, guid: 31cd91e9e7a240a4bafe4a6f4ef22341, type: 3}
   messySprite: {fileID: 0}
   animatedSprite: 0
 --- !u!1001 &3797228351833018864
