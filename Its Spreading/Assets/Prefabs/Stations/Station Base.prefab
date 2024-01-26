@@ -53,6 +53,12 @@ MonoBehaviour:
   uiShowTrigger: {fileID: 7959849091452957803}
   maxFillAmount: 100
   fillAmountPerTick: 10
+  messTimes:
+  - 10
+  - 5
+  - 4
+  - 3
+  - 1
   messy: 0
 --- !u!58 &1662436642
 CircleCollider2D:

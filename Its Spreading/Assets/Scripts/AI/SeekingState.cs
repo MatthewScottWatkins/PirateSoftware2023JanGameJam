@@ -17,7 +17,7 @@ public class SeekingState : State
         owner.SetTargetStation(attemptStation);
 
         targetStation = owner.GetTargetStation();
-        targetStation.SetClaimed();
+        targetStation.SetClaimed(true);
         agent.SetDestination(targetStation.transform.position);
     }
 

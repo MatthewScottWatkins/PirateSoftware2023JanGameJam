@@ -62,6 +62,7 @@ public class StateMachine : MonoBehaviour
             return;
 
         cooldownManager.setCanCook(false);
+        targetStation.SetClaimed(false);
 
         curState.OnExit();
         curState = states[5];
@@ -70,15 +71,15 @@ public class StateMachine : MonoBehaviour
 
     private void SetHungerVariables()
     {
-        //on hunger index change, foreach wait state, decrease the time the child waits
-        foreach(State state in states)
-        {
-            WaitingState wait = state as WaitingState;
-            if(wait != null)
-            {
-                wait.SetWaitIndex(childHungerManager.GetHungerIndex());
-            }
-        }
+        ////on hunger index change, foreach wait state, decrease the time the child waits
+        //foreach(State state in states)
+        //{
+        //    WaitingState wait = state as WaitingState;
+        //    if(wait != null)
+        //    {
+        //        wait.SetWaitIndex(childHungerManager.GetHungerIndex());
+        //    }
+        //}
     }
 
     public void SetState(int newStateIndex)
