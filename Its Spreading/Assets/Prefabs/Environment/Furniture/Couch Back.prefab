@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5434146517136362187}
   - component: {fileID: 4511607080392489061}
   - component: {fileID: 1330710276197978859}
+  - component: {fileID: -1968707758126434002}
   m_Layer: 0
   m_Name: Couch Back
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.671875, y: 0.359375}
   m_EdgeRadius: 0
+--- !u!114 &-1968707758126434002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429891064265594434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

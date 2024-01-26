@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 197991734765640548}
   - component: {fileID: 1746474342141646752}
   - component: {fileID: 3497320752053392355}
+  - component: {fileID: -8079458111273729158}
   m_Layer: 0
   m_Name: Countertop Sink and Fridge
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.53125}
   m_EdgeRadius: 0
+--- !u!114 &-8079458111273729158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820173511622957889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
