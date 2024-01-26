@@ -23,7 +23,7 @@ public class ChildHungerManager : MonoBehaviour
     [SerializeField] private float[] hungerSpeeds;
 
     //events
-    public event Action OnHungerChange;
+    public static event Action OnHungerChange;
     private int hungerIndex;
     private int lastHungerIndex;
 

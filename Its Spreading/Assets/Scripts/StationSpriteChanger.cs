@@ -19,13 +19,23 @@ public class StationSpriteChanger : MonoBehaviour
         station.OnMessy += ChangeSpriteMessy;
     }
 
+    private void OnDisable()
+    {
+        station.OnCleaned -= ChangeSpriteCleaned;
+        station.OnMessy -= ChangeSpriteMessy;
+    }
+
     private void ChangeSpriteCleaned()
     {
         spriteRenderer.sprite = cleanSprite;
+        
+        //if animated sprite toggle
     }
 
     private void ChangeSpriteMessy()
     {
         spriteRenderer.sprite = messySprite;
+
+        //if animated sprite toggle
     }
 }
