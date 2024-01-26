@@ -116,7 +116,7 @@ public class Station : MonoBehaviour, IMovementController
 
         if(TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
         {
-            hazard.enabled = true;
+            hazard.stunOn = true;
         }
 
         stationState.ChangeSpriteMessy();
@@ -128,7 +128,6 @@ public class Station : MonoBehaviour, IMovementController
     {
         if (!active ||!messy)
             return;
-
 
 
         curFillAmount += fillAmountPerTick;
@@ -149,7 +148,7 @@ public class Station : MonoBehaviour, IMovementController
 
             if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
             {
-                hazard.enabled = true;
+                hazard.stunOn = false;
             }
             //change sprite to clean sprite
         }
@@ -184,7 +183,7 @@ public class Station : MonoBehaviour, IMovementController
 
             if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
             {
-                hazard.enabled = true;
+                hazard.stunOn = false;
             }  
         }
     }
@@ -222,7 +221,7 @@ public class Station : MonoBehaviour, IMovementController
 
             if (TryGetComponent<EnvironmentHazard>(out EnvironmentHazard hazard))
             {
-                hazard.enabled = true;
+                hazard.stunOn = false;
             }
         }
     }

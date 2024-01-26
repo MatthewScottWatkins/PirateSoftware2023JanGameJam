@@ -8839,6 +8839,28 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1839516672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4248806154170346007, guid: 6e512cbbe0e81f740b658a8c99c95d4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2415495129497958013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839516676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839516672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!114 &1844869278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13213,6 +13235,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
+      propertyPath: cookCooldown
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
+      propertyPath: sendToRoomCooldown
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
+        type: 3}
+      propertyPath: stoppingDrag
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
+        type: 3}
+      propertyPath: stunCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
+        type: 3}
+      propertyPath: stunDuration
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 9068463997258642355, guid: 205619589d86cbb459878c715f793967,
         type: 3}
       propertyPath: m_RootOrder

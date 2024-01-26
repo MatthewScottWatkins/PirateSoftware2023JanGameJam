@@ -12,6 +12,8 @@ public class StationSpriteChanger : MonoBehaviour
     [SerializeField] private Sprite cleanSprite;
     [SerializeField] private Sprite messySprite;
     [SerializeField] private bool animatedSprite;
+    [SerializeField] private Animator animator;
+    public string animationText;
 
     private void OnEnable()
     {
@@ -27,15 +29,25 @@ public class StationSpriteChanger : MonoBehaviour
 
     public void ChangeSpriteCleaned()
     {
+        if (animatedSprite) 
+        {
+            
+            animator.SetTrigger("Stop"); 
+        }
+
         spriteRenderer.sprite = cleanSprite;
-        
-        //if animated sprite toggle
     }
 
     public void ChangeSpriteMessy()
     {
-        spriteRenderer.sprite = messySprite;
-
-        //if animated sprite toggle
+        if (animatedSprite) 
+        { 
+            animator.SetTrigger(animationText); 
+        }
+        else
+        {
+            spriteRenderer.sprite = messySprite;
+        }
+        
     }
 }
