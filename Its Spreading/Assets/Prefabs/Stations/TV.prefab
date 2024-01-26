@@ -15,12 +15,12 @@ PrefabInstance:
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.28
       objectReference: {fileID: 0}
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 9.08
       objectReference: {fileID: 0}
     - target: {fileID: 3819890628603520272, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
@@ -65,7 +65,13 @@ PrefabInstance:
     - target: {fileID: 3819890628603520274, guid: 5479d60fc61892343bcd849c49ecac94,
         type: 3}
       propertyPath: m_Name
-      value: Station Base
+      value: TV
       objectReference: {fileID: 0}
+    - target: {fileID: 3819890629686810386, guid: 5479d60fc61892343bcd849c49ecac94,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1190195243, guid: 117925b2e4db69b4faf18fc24929a1ec,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5479d60fc61892343bcd849c49ecac94, type: 3}

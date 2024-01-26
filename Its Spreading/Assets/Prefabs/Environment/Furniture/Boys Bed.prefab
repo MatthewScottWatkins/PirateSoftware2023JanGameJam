@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1105045811087613173}
   - component: {fileID: 1757990808030726752}
   - component: {fileID: 5559126584363610557}
+  - component: {fileID: 2982042531370189452}
   m_Layer: 0
   m_Name: Boys Bed
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.625}
   m_EdgeRadius: 0
+--- !u!114 &2982042531370189452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048605727914708095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6230892196779791691}
   - component: {fileID: 4899608946918312164}
   - component: {fileID: 5255138266376566534}
+  - component: {fileID: 7545602473596362969}
   m_Layer: 0
   m_Name: Washing Machine
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.375, y: 0.59375}
   m_EdgeRadius: 0
+--- !u!114 &7545602473596362969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247128987787529307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
