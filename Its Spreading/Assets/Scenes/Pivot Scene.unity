@@ -517,41 +517,6 @@ PrefabInstance:
       propertyPath: hungerBar
       value: 
       objectReference: {fileID: 2003537506}
-    - target: {fileID: 6486180403085989453, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486180403085989453, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[1]
-      value: 4.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486180403085989453, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[2]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486180403085989453, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[3]
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486180403085989453, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[4]
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7248395436213635686, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7248395436213635686, guid: 718841156ea4aac45a49e8965229d3c2,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718841156ea4aac45a49e8965229d3c2, type: 3}
 --- !u!1 &89834915 stripped
@@ -605,41 +570,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6049769134359730786, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
         type: 3}
       propertyPath: hungerBar
       value: 
       objectReference: {fileID: 177202950}
-    - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[1]
-      value: 4.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[2]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[3]
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881839694625605193, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: hungerSpeeds.Array.data[4]
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 7954538261203281654, guid: 0c84d08d36baf9b4a9e2d30883849898,
         type: 3}
       propertyPath: m_RootOrder
@@ -699,11 +634,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Girl
-      objectReference: {fileID: 0}
-    - target: {fileID: 8765335519520037753, guid: 0c84d08d36baf9b4a9e2d30883849898,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c84d08d36baf9b4a9e2d30883849898, type: 3}
@@ -5610,11 +5540,6 @@ PrefabInstance:
       propertyPath: hungymanager
       value: 
       objectReference: {fileID: 1170059399}
-    - target: {fileID: 1273500045866502047, guid: 26a860c4d362ccd4c9d431a72479123e,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7201373280263035786, guid: 26a860c4d362ccd4c9d431a72479123e,
         type: 3}
       propertyPath: m_Name
@@ -6611,12 +6536,6 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!95 &1317630725 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9068463997258642351, guid: 205619589d86cbb459878c715f793967,
-    type: 3}
-  m_PrefabInstance: {fileID: 9068463995579597660}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1318451265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13357,14 +13276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2099741401, guid: e810206b3c593d54aa0ab6aa101808bc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 2099741401, guid: e810206b3c593d54aa0ab6aa101808bc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.56
-      objectReference: {fileID: 0}
     - target: {fileID: 906092599677626559, guid: e810206b3c593d54aa0ab6aa101808bc,
         type: 3}
       propertyPath: m_RootOrder
@@ -13420,28 +13331,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4298172459800684215, guid: e810206b3c593d54aa0ab6aa101808bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5335722579678326863, guid: e810206b3c593d54aa0ab6aa101808bc,
         type: 3}
       propertyPath: Table
       value: 
       objectReference: {fileID: 2135448604}
-    - target: {fileID: 5335722579678326863, guid: e810206b3c593d54aa0ab6aa101808bc,
-        type: 3}
-      propertyPath: fullTableSprite
-      value: 
-      objectReference: {fileID: 720313096, guid: ce8ad7e99ecd343488aa677a35ca937e,
-        type: 3}
-    - target: {fileID: 5335722579678326863, guid: e810206b3c593d54aa0ab6aa101808bc,
-        type: 3}
-      propertyPath: emptyTableSprite
-      value: 
-      objectReference: {fileID: 491014318, guid: ce8ad7e99ecd343488aa677a35ca937e,
-        type: 3}
     - target: {fileID: 6826924419998686130, guid: e810206b3c593d54aa0ab6aa101808bc,
         type: 3}
       propertyPath: m_Name
@@ -13456,50 +13350,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 173464055, guid: 205619589d86cbb459878c715f793967, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1317630725}
-    - target: {fileID: 691194280, guid: 205619589d86cbb459878c715f793967, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
       propertyPath: rageUI
       value: 
       objectReference: {fileID: 832942627}
-    - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
-      propertyPath: cookCooldown
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
-      propertyPath: sendToRoomCooldown
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1919368975, guid: 205619589d86cbb459878c715f793967, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
-        type: 3}
-      propertyPath: stoppingDrag
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
-        type: 3}
-      propertyPath: stunCooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068463997258642349, guid: 205619589d86cbb459878c715f793967,
-        type: 3}
-      propertyPath: stunDuration
-      value: 1.25
-      objectReference: {fileID: 0}
     - target: {fileID: 9068463997258642355, guid: 205619589d86cbb459878c715f793967,
         type: 3}
       propertyPath: m_RootOrder
