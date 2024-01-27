@@ -16,10 +16,10 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private CooldownManager cooldownManager;
     [SerializeField] private Animator anim;
 
-    private void OnEnable()
-    {
-        //StateMachine.OnSendToRoom +=
-    }
+    //stats
+    private bool vfxSpawned;
+    private float lastvfx;
+    private float vfxDuration = 0.5f;
 
     private void Start()
     {
@@ -30,6 +30,17 @@ public class PlayerInteractor : MonoBehaviour
         controls.Player.InteractionBaFB.performed += InteractionBaFB;
         controls.Player.Rage.performed += Rage;
         controls.Enable();
+    }
+
+    private void Update()
+    {
+        if (!vfxSpawned)
+            return;
+
+        if(Time.time - lastvfx > vfxDuration)
+        {
+
+        }
     }
 
     public void Interaction(InputAction.CallbackContext ctx)
@@ -53,7 +64,6 @@ public class PlayerInteractor : MonoBehaviour
             anim.SetTrigger("Rage");
             OnRage?.Invoke();
         }
-
     }
 
 }
