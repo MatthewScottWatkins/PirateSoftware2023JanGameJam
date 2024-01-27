@@ -14,6 +14,7 @@ public class KitchenPoint : MonoBehaviour, IMovementController
     [SerializeField] private Transform GoToPoint;
     [SerializeField] private SpriteRenderer Table;
     private CooldownManager cooldownManager;
+    private Animator animator;
 
     public Sprite emptyTableSprite;
     public Sprite fullTableSprite;
@@ -30,6 +31,7 @@ public class KitchenPoint : MonoBehaviour, IMovementController
     private void Awake()
     {
         cooldownManager = FindObjectOfType<CooldownManager>();
+        animator = FindObjectOfType<PlayerInteractor>().GetComponent<Animator>();
     }
 
     #region events
@@ -69,6 +71,8 @@ public class KitchenPoint : MonoBehaviour, IMovementController
             return;
 
         TriggerMovement();
+
+        animator.SetTrigger("Cook");
 
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;

@@ -132,6 +132,7 @@ public class Station : MonoBehaviour, IMovementController
 
     }
 
+
     //using when active
     private void InteractionSpam()
     {
