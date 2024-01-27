@@ -19,6 +19,8 @@ public class Station : MonoBehaviour, IMovementController
     [SerializeField] private Image backgroundSliderImage;
     [SerializeField] private UIShowTrigger uiShowTrigger;
     public StationSpriteChanger stationState;
+    public ParticleSystem VFX;
+    public Transform VFXspawn;
     private Controls controls;
 
     //events
@@ -229,5 +231,19 @@ public class Station : MonoBehaviour, IMovementController
     public void TriggerMovement()
     {
         OnMovementStop?.Invoke();
+    }
+
+    public void VFXPlay()
+    {
+        ParticleSystem particle = Instantiate(VFX, VFXspawn.parent);
+
+        particle.Play();
+    }
+
+    public void VFXStop()
+    {
+        ParticleSystem particle = GetComponentInChildren<ParticleSystem>();
+        particle.Stop();
+        Destroy(particle.gameObject);
     }
 }

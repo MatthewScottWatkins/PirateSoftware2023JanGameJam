@@ -6,9 +6,9 @@ public class CooldownManager : MonoBehaviour
 {
     [SerializeField] private float cookCooldown;
     [SerializeField] private float sendToRoomCooldown;
-    private bool canCook = true;
+    private bool canCook = false;
     private float lastCook;
-    private bool canSendToRoom = true;
+    private bool canSendToRoom = false;
     private float lastSendToRoom;
 
     //gets

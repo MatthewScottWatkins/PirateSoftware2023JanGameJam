@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1051244243108850595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7798832819401849408}
+  m_Layer: 0
+  m_Name: VFX Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7798832819401849408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051244243108850595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3819890628603520272}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3819890628603520274
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 3819890629686810389}
   - {fileID: 3819890629657768279}
+  - {fileID: 7798832819401849408}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,6 +84,8 @@ MonoBehaviour:
   backgroundSliderImage: {fileID: 3819890628682451404}
   uiShowTrigger: {fileID: 7959849091452957803}
   stationState: {fileID: 8237513907872687950}
+  VFX: {fileID: 2077762679557966774, guid: f4c475ca4b6729946b765a2fd0b8af7d, type: 3}
+  VFXspawn: {fileID: 7798832819401849408}
   gameType: 1
   maxFillAmount: 100
   fillAmountPerTick: 10
@@ -194,6 +228,8 @@ MonoBehaviour:
   cleanSprite: {fileID: 21300000, guid: 31cd91e9e7a240a4bafe4a6f4ef22341, type: 3}
   messySprite: {fileID: 0}
   animatedSprite: 0
+  animator: {fileID: 0}
+  animationText: 
 --- !u!1001 &3797228351833018864
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -25,7 +25,8 @@ public class WaitingState : State
     {
         base.OnEnter();
         lastWait = Time.time;
-        if(messySetter)
+        owner.GetTargetStation().VFXPlay();
+        if (messySetter)
         waitLengths = owner.GetTargetStation().GetMessTimes();
 
         roomPoint = FindObjectOfType<RoomPoint>();
@@ -50,7 +51,7 @@ public class WaitingState : State
 
     public override void OnExit()
     {
-
+        owner.GetTargetStation().VFXStop();
     }
 
 
