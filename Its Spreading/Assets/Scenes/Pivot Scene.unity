@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4264,6 +4264,18 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &832942627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1273500045866502047, guid: 26a860c4d362ccd4c9d431a72479123e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1101596916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &835513712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918228181451563217, guid: 6e512cbbe0e81f740b658a8c99c95d4f,
@@ -5598,6 +5610,11 @@ PrefabInstance:
       propertyPath: hungymanager
       value: 
       objectReference: {fileID: 1170059399}
+    - target: {fileID: 1273500045866502047, guid: 26a860c4d362ccd4c9d431a72479123e,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7201373280263035786, guid: 26a860c4d362ccd4c9d431a72479123e,
         type: 3}
       propertyPath: m_Name
@@ -6594,6 +6611,12 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!95 &1317630725 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9068463997258642351, guid: 205619589d86cbb459878c715f793967,
+    type: 3}
+  m_PrefabInstance: {fileID: 9068463995579597660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1318451265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13433,10 +13456,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173464055, guid: 205619589d86cbb459878c715f793967, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1317630725}
     - target: {fileID: 691194280, guid: 205619589d86cbb459878c715f793967, type: 3}
       propertyPath: m_SortingOrder
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
+      propertyPath: rageUI
+      value: 
+      objectReference: {fileID: 832942627}
     - target: {fileID: 1626352057, guid: 205619589d86cbb459878c715f793967, type: 3}
       propertyPath: cookCooldown
       value: 20

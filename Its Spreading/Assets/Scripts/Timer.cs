@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -48,10 +49,12 @@ public class Timer : MonoBehaviour
             if (messyBar.statusIndex >= 2)
             {
                 //lose
+                SceneManager.LoadScene(2);
             }
             else
             {
                 //win
+                SceneManager.LoadScene(3);
             }
         }
     }

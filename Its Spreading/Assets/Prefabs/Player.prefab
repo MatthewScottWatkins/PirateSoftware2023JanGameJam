@@ -407,7 +407,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!114 &691194279
 MonoBehaviour:
@@ -830,7 +830,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!114 &1919368974
 MonoBehaviour:
@@ -1243,10 +1243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7c794564ffa3b468eb82c61e10783f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  stoppingDrag: 5
-  stunDuration: 5
-  stunCooldown: 5
+  speed: 5
+  stoppingDrag: 6
+  stunDuration: 1.25
+  stunCooldown: 3
 --- !u!95 &9068463997258642351
 Animator:
   serializedVersion: 5
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownManager: {fileID: 1626352057}
+  anim: {fileID: 9068463997258642351}
 --- !u!114 &1626352057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,5 +1293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b939f32a9e3aea34fac5be32cbfa3754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookCooldown: 10
-  sendToRoomCooldown: 10
+  cookCooldown: 20
+  sendToRoomCooldown: 30
+  rageUI: {fileID: 0}

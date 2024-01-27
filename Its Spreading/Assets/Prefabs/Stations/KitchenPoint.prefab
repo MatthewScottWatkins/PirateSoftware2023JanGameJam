@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099741400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.4, z: 0}
+  m_LocalPosition: {x: 12.89, y: -6.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,6 +168,9 @@ MonoBehaviour:
   sliderImage: {fileID: 4298172459753407550}
   backgroundSliderImage: {fileID: 4298172460024946221}
   GoToPoint: {fileID: 2099741401}
+  Table: {fileID: 0}
+  emptyTableSprite: {fileID: 491014318, guid: ce8ad7e99ecd343488aa677a35ca937e, type: 3}
+  fullTableSprite: {fileID: 720313096, guid: ce8ad7e99ecd343488aa677a35ca937e, type: 3}
   maxFillAmount: 100
   fillAmountPerTick: 10
 --- !u!114 &3340068075878169618
@@ -219,7 +222,7 @@ PrefabInstance:
     - target: {fileID: 121752602249830566, guid: 5f6d280666f28d643a5b09e4c9ba7296,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 121752602249830567, guid: 5f6d280666f28d643a5b09e4c9ba7296,
         type: 3}

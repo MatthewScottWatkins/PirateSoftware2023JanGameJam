@@ -23,7 +23,7 @@ public class State : ScriptableObject
     {
         //play anim
         if (animationName.Enabled)
-            owner.GetAnimator().Play(animationName.Value);
+            owner.GetAnimator().SetTrigger(animationName.Value);
     }
 
     public virtual void OnTick()

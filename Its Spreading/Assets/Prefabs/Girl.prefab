@@ -125,18 +125,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1548341131451023446}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5458957736425111641 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6827119679509528591, guid: 941265fe2250af94cb095054b795ff3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1548341131451023446}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3968191614097330280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,7 +257,37 @@ PrefabInstance:
         type: 3}
       propertyPath: hungerBar
       value: 
-      objectReference: {fileID: 5458957736425111641}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516763975157224993, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: hungerSpeeds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516763975157224993, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: hungerSpeeds.Array.data[1]
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516763975157224993, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: hungerSpeeds.Array.data[2]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516763975157224993, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: hungerSpeeds.Array.data[3]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516763975157224993, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: hungerSpeeds.Array.data[4]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270148755240176138, guid: 2f1ab59ca33c61741a9897538bbcf28b,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7391777519104475703, guid: 2f1ab59ca33c61741a9897538bbcf28b,
         type: 3}
       propertyPath: m_LocalScale.x

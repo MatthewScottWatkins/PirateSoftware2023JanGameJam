@@ -16,11 +16,6 @@ public class WaitingState : State
 
     private float lastWait;
 
-    //public void SetWaitIndex(int val)
-    //{
-    //    waitIndex = val;
-    //}
-
     public override void OnEnter()
     {
         base.OnEnter();

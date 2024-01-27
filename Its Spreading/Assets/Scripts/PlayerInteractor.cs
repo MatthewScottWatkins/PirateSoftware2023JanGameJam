@@ -7,12 +7,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteractor : MonoBehaviour
 {
+
     public static event Action OnInteract;
     public static event Action OnInteractBaFA;
     public static event Action OnInteractBaFB;
     public static event Action OnRage;
     private Controls controls;
     [SerializeField] private CooldownManager cooldownManager;
+    [SerializeField] private Animator anim;
 
     private void OnEnable()
     {
@@ -48,6 +50,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (cooldownManager.GetCanSendToRoom())
         {
+            anim.SetTrigger("Rage");
             OnRage?.Invoke();
         }
 

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CooldownManager : MonoBehaviour
 {
     [SerializeField] private float cookCooldown;
     [SerializeField] private float sendToRoomCooldown;
+    [SerializeField] private Image rageUI;
     private bool canCook = false;
     private float lastCook;
     private bool canSendToRoom = false;
@@ -49,7 +51,12 @@ public class CooldownManager : MonoBehaviour
         {
             if(Time.time - lastSendToRoom > sendToRoomCooldown)
                 canSendToRoom = true;
+            else
+            rageUI.fillAmount = (Time.time - lastSendToRoom) / sendToRoomCooldown;
         }
+
+
+
     }
 
 }
