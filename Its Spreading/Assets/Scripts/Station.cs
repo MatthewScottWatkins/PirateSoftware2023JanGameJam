@@ -18,6 +18,7 @@ public class Station : MonoBehaviour, IMovementController
     [SerializeField] private Image sliderImage;
     [SerializeField] private Image backgroundSliderImage;
     [SerializeField] private UIShowTrigger uiShowTrigger;
+    private Animator animator;
     public StationSpriteChanger stationState;
     public ParticleSystem VFX;
     public Transform VFXspawn;
@@ -40,6 +41,7 @@ public class Station : MonoBehaviour, IMovementController
     [SerializeField] private bool messy = false;
     private bool claimed = false;
     private bool curAction = false;
+    private bool actionCount = false;
 
     //gets
     public bool GetMessyBool() { return messy; }
@@ -96,6 +98,11 @@ public class Station : MonoBehaviour, IMovementController
     }
     #endregion
 
+    private void Start()
+    {
+        animator = FindObjectOfType<PlayerMovement>().GetComponent<Animator>();
+    }
+
     //sets
     public void SetClaimed(bool val)
     {
@@ -131,6 +138,16 @@ public class Station : MonoBehaviour, IMovementController
         if (!active ||!messy)
             return;
 
+        if(actionCount == false)
+        {
+            animator.SetTrigger("Sweep 1");
+            actionCount = true;
+        }
+        else
+        {
+            animator.SetTrigger("Sweep 2");
+            actionCount = false;
+        }
 
         curFillAmount += fillAmountPerTick;
         sliderImage.fillAmount = curFillAmount / maxFillAmount;
@@ -164,6 +181,8 @@ public class Station : MonoBehaviour, IMovementController
         //if Button B is press instead of button A return;
         if (curAction == false)
             return;
+
+        animator.SetTrigger("Scrub");
 
         curAction = false;
 
@@ -200,6 +219,8 @@ public class Station : MonoBehaviour, IMovementController
         {
             return;
         }
+
+        animator.SetTrigger("Scrub");
 
         TriggerMovement();
 
